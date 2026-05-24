@@ -674,3 +674,41 @@ body {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ── SUB-CATEGORY ── */
+.sub-category {
+  margin-bottom: 40px;
+}
+.sub-category-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 10px 16px;
+  background: var(--surface-2);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--teal);
+}
+.sub-cat-icon {
+  display: flex;
+  align-items: center;
+  color: var(--teal);
+  flex-shrink: 0;
+}
+.sub-cat-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+.sub-cat-count {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 2px 10px;
+}

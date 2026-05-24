@@ -74,7 +74,7 @@
         </div>
         <div class="hero-stats">
           <div class="stat-item">
-            <span class="stat-n">5</span>
+            <span class="stat-n">6</span>
             <span class="stat-l" data-zh="互動工具" data-en="Tools">互動工具</span>
           </div>
           <div class="stat-sep"></div>
@@ -171,7 +171,17 @@
         <h2 class="section-title" data-zh="數學 (M2)" data-en="Mathematics (M2)">數學 (M2)</h2>
         <p class="section-desc" data-zh="涵蓋微積分、線性代數、級數等 M2 核心主題的互動工具" data-en="Interactive tools covering calculus, linear algebra, series and other core M2 topics">涵蓋微積分、線性代數、級數等 M2 核心主題的互動工具</p>
       </div>
-      <div class="cards-grid">
+
+      <!-- ── Sub-category: Algebra ── -->
+      <div class="sub-category">
+        <div class="sub-category-header">
+          <span class="sub-cat-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M17 17h.01M14 20h6M17 14v6"/></svg>
+          </span>
+          <h3 class="sub-cat-title" data-zh="代數" data-en="Algebra">代數</h3>
+          <span class="sub-cat-count" data-zh="2 個工具" data-en="2 tools">2 個工具</span>
+        </div>
+        <div class="cards-grid">
 
         <!-- Card: Linear Algebra Lab -->
         <article class="tool-card">
@@ -242,6 +252,19 @@
             </a>
           </div>
         </article>
+        </div><!-- end .cards-grid algebra -->
+      </div><!-- end .sub-category algebra -->
+
+      <!-- ── Sub-category: Calculus ── -->
+      <div class="sub-category">
+        <div class="sub-category-header">
+          <span class="sub-cat-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16c1-3 3-5 5-5s4 2 5 5"/><circle cx="12" cy="8" r="1.5" fill="currentColor"/></svg>
+          </span>
+          <h3 class="sub-cat-title" data-zh="微積分" data-en="Calculus">微積分</h3>
+          <span class="sub-cat-count" data-zh="3 個工具" data-en="3 tools">3 個工具</span>
+        </div>
+        <div class="cards-grid">
 
         <!-- Card: Curve Sketching and Differentiation -->
         <article class="tool-card">
@@ -261,7 +284,7 @@
             </div>
           </div>
           <div class="card-body">
-            <h3 class="card-title" data-zh="Curve Sketching and Differentiation" data-en="Curve Sketching and Differentiation">Curve Sketching and Differentiation</h3>
+            <h3 class="card-title" data-zh="Differentiation and Curve Sketching" data-en="Differentiation and Curve Sketching">Differentiation and Curve Sketching</h3>
             <p class="card-desc" data-zh="自動計算 f'(x) 和 f''(x)、臨界點、單調性、凹凸性及漸近線，繪製 GeoGebra 風格圖形。" data-en="Auto-compute f'(x) and f''(x), critical points, monotonicity, concavity and asymptotes with GeoGebra-style graphs.">自動計算 f'(x) 和 f''(x)、臨界點、單調性、凹凸性及漸近線，繪製 GeoGebra 風格圖形。</p>
             <div class="card-formula">$$f''(x) > 0 \Rightarrow \text{concave up}$$</div>
             <ul class="card-features">
@@ -315,7 +338,41 @@
           </div>
         </article>
 
-      </div>
+        <!-- Card: Indefinite Integration -->
+        <article class="tool-card">
+          <div class="card-top">
+            <div class="card-icon-box m2-icon">
+              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                <path d="M16 8 Q11 28 16 48" stroke="currentColor" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                <path d="M22 20 Q30 14 36 28 Q42 42 32 46" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+                <text x="37" y="16" fill="currentColor" font-size="12" font-family="serif" opacity="0.9">+C</text>
+              </svg>
+            </div>
+            <div class="card-tags">
+              <span class="tag m2-tag" data-zh="不定積分" data-en="Indefinite Integration">不定積分</span>
+              <span class="tag m2-tag" data-zh="反微分" data-en="Anti-differentiation">反微分</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title" data-zh="Indefinite Integration" data-en="Indefinite Integration">Indefinite Integration</h3>
+            <p class="card-desc" data-zh="計算不定積分，逐步顯示反微分過程，支援多種積分技巧，輸出含積分常數 C 的精確答案。" data-en="Compute indefinite integrals with step-by-step anti-differentiation, supporting multiple integration techniques with exact answers including constant C.">計算不定積分，逐步顯示反微分過程，支援多種積分技巧，輸出含積分常數 C 的精確答案。</p>
+            <div class="card-formula">$$\int f(x)\,dx = F(x) + C$$</div>
+            <ul class="card-features">
+              <li data-zh="多種積分技巧（代換、分部等）" data-en="Multiple techniques (substitution, by parts, etc.)">多種積分技巧（代換、分部等）</li>
+              <li data-zh="逐步反微分過程顯示" data-en="Step-by-step anti-differentiation">逐步反微分過程顯示</li>
+              <li data-zh="精確答案含積分常數 C" data-en="Exact answer with integration constant C">精確答案含積分常數 C</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="https://kingtmc314.github.io/integral-calculator-students/" target="_blank" rel="noopener" class="launch-btn m2-btn">
+              <span data-zh="開啟工具" data-en="Launch Tool">開啟工具</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </article>
+        </div><!-- end .cards-grid calculus -->
+      </div><!-- end .sub-category calculus -->
+
     </section>
 
   </main>
