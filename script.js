@@ -1,6 +1,6 @@
 // ============================================================
 // Maths Learning Hub — script.js
-// Handles: bilingual toggle (ZH/EN), navbar scroll effect
+// Handles: bilingual toggle (ZH/EN), navbar scroll, animations
 // ============================================================
 
 (function () {
@@ -44,7 +44,7 @@
 
   // ── Intersection Observer for card entrance animations ──
   if ('IntersectionObserver' in window) {
-    const cards = document.querySelectorAll('.tool-card');
+    const animTargets = document.querySelectorAll('.tool-card, .formula-card');
     const observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -52,11 +52,11 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.08 });
 
-    cards.forEach(function (card) {
-      card.style.animationPlayState = 'paused';
-      observer.observe(card);
+    animTargets.forEach(function (el) {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
     });
   }
 

@@ -5,9 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Maths Learning Hub | 數學學習資源中心</title>
   <meta name="description" content="A curated collection of interactive mathematics learning tools for HKDSE students." />
+
+  <!-- Google Fonts: Source Serif 4 (headings) + Inter (body) + Noto Serif TC (CJK) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '\\(', right: '\\)', display: false}
+      ],
+      throwOnError: false
+    });"></script>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,14 +31,19 @@
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="#" class="nav-brand">
-        <span class="brand-sigma">Σ</span>
-        <span class="brand-text" data-zh="數學學習資源中心" data-en="Maths Learning Hub">數學學習資源中心</span>
+        <div class="brand-logo">
+          <span class="brand-sigma">Σ</span>
+        </div>
+        <div class="brand-text-wrap">
+          <span class="brand-text" data-zh="數學學習資源中心" data-en="Maths Learning Hub">數學學習資源中心</span>
+          <span class="brand-sub">HKDSE Mathematics</span>
+        </div>
       </a>
       <div class="nav-right">
         <a href="#core" class="nav-link" data-zh="必修" data-en="Core">必修</a>
         <a href="#m2" class="nav-link" data-zh="M2" data-en="M2">M2</a>
         <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
-          <span class="lang-active" id="langLabel">EN</span>
+          <span id="langLabel">EN</span>
         </button>
       </div>
     </div>
@@ -31,36 +51,64 @@
 
   <!-- ── HERO ── -->
   <header class="hero">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-content">
-      <div class="hero-eyebrow" data-zh="HKDSE 數學 · 互動學習工具" data-en="HKDSE Mathematics · Interactive Learning Tools">HKDSE 數學 · 互動學習工具</div>
-      <h1 class="hero-title">
-        <span class="hero-title-main" data-zh="數學學習" data-en="Maths">數學學習</span>
-        <span class="hero-title-accent" data-zh="資源中心" data-en="Learning Hub">資源中心</span>
-      </h1>
-      <p class="hero-subtitle" data-zh="整合必修及模組二的互動計算工具，助你深入理解數學概念。" data-en="A curated suite of interactive calculators and visualisers for Core Mathematics and Module 2.">整合必修及模組二的互動計算工具，助你深入理解數學概念。</p>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num">5</span>
-          <span class="stat-label" data-zh="工具" data-en="Tools">工具</span>
+    <!-- Decorative math background -->
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-bg-dots"></div>
+      <div class="hero-bg-lines"></div>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge" data-zh="HKDSE 數學 · 互動學習工具" data-en="HKDSE Mathematics · Interactive Learning Tools">HKDSE 數學 · 互動學習工具</div>
+        <h1 class="hero-title">
+          <span class="hero-title-line1" data-zh="數學學習" data-en="Maths">數學學習</span>
+          <span class="hero-title-line2" data-zh="資源中心" data-en="Learning Hub">資源中心</span>
+        </h1>
+        <p class="hero-desc" data-zh="整合必修及 M2 的互動計算工具，助你深入理解數學概念，掌握解題技巧。" data-en="A curated suite of interactive calculators and visualisers for Core Mathematics and Module 2 (M2).">整合必修及 M2 的互動計算工具，助你深入理解數學概念，掌握解題技巧。</p>
+        <div class="hero-cta">
+          <a href="#core" class="btn-primary" data-zh="瀏覽工具" data-en="Browse Tools">瀏覽工具</a>
+          <a href="https://github.com/kingtmc314/maths-hub" target="_blank" rel="noopener" class="btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">2</span>
-          <span class="stat-label" data-zh="科目" data-en="Subjects">科目</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">∞</span>
-          <span class="stat-label" data-zh="練習" data-en="Practice">練習</span>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-n">5</span>
+            <span class="stat-l" data-zh="互動工具" data-en="Tools">互動工具</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-item">
+            <span class="stat-n">2</span>
+            <span class="stat-l" data-zh="科目分類" data-en="Subjects">科目分類</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-item">
+            <span class="stat-n">∞</span>
+            <span class="stat-l" data-zh="練習機會" data-en="Practice">練習機會</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="hero-formula-display" aria-hidden="true">
-      <div class="formula-line">∑<sub>r=1</sub><sup>n</sup> r = n(n+1)/2</div>
-      <div class="formula-line">∫<sub>a</sub><sup>b</sup> f(x) dx</div>
-      <div class="formula-line">Ax = λx</div>
-      <div class="formula-line">sin²θ + cos²θ = 1</div>
+
+      <!-- LaTeX formula showcase panel -->
+      <div class="hero-formula-panel" aria-hidden="true">
+        <div class="formula-card fc-1">
+          <div class="formula-label">Series</div>
+          <div class="formula-math">$$\sum_{r=1}^{n} r = \frac{n(n+1)}{2}$$</div>
+        </div>
+        <div class="formula-card fc-2">
+          <div class="formula-label">Integration</div>
+          <div class="formula-math">$$\int_a^b f(x)\,dx = F(b) - F(a)$$</div>
+        </div>
+        <div class="formula-card fc-3">
+          <div class="formula-label">Eigenvalue</div>
+          <div class="formula-math">$$A\mathbf{x} = \lambda\mathbf{x}$$</div>
+        </div>
+        <div class="formula-card fc-4">
+          <div class="formula-label">Trigonometry</div>
+          <div class="formula-math">$$\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}$$</div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -70,41 +118,45 @@
     <!-- ── CORE MATHS SECTION ── -->
     <section class="subject-section" id="core">
       <div class="section-header">
-        <div class="section-tag" data-zh="必修科目" data-en="Compulsory Subject">必修科目</div>
+        <div class="section-pill core-pill" data-zh="必修科目" data-en="Compulsory Subject">必修科目</div>
         <h2 class="section-title" data-zh="數學（必修）" data-en="Mathematics (Core)">數學（必修）</h2>
         <p class="section-desc" data-zh="涵蓋 HKDSE 數學必修部分的互動工具" data-en="Interactive tools covering the HKDSE Mathematics compulsory curriculum">涵蓋 HKDSE 數學必修部分的互動工具</p>
       </div>
       <div class="cards-grid">
 
         <!-- Card: 3D 立體三角 -->
-        <article class="tool-card" data-category="core">
-          <div class="card-icon-wrap">
-            <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="24,4 44,36 4,36" stroke="#D4A843" stroke-width="2" fill="none"/>
-              <line x1="24" y1="4" x2="24" y2="36" stroke="#D4A843" stroke-width="1.5" stroke-dasharray="3,2"/>
-              <line x1="14" y1="20" x2="34" y2="20" stroke="#D4A843" stroke-width="1.5" stroke-dasharray="3,2"/>
-              <circle cx="24" cy="4" r="2" fill="#D4A843"/>
-              <circle cx="44" cy="36" r="2" fill="#D4A843"/>
-              <circle cx="4" cy="36" r="2" fill="#D4A843"/>
-            </svg>
+        <article class="tool-card">
+          <div class="card-top">
+            <div class="card-icon-box core-icon">
+              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                <polygon points="28,6 50,42 6,42" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
+                <line x1="28" y1="6" x2="28" y2="42" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4,3" opacity="0.6"/>
+                <line x1="17" y1="24" x2="39" y2="24" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4,3" opacity="0.6"/>
+                <circle cx="28" cy="6" r="2.5" fill="currentColor"/>
+                <circle cx="50" cy="42" r="2.5" fill="currentColor"/>
+                <circle cx="6" cy="42" r="2.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="card-tags">
+              <span class="tag core-tag" data-zh="立體幾何" data-en="Solid Geometry">立體幾何</span>
+              <span class="tag core-tag" data-zh="三角" data-en="Trigonometry">三角</span>
+            </div>
           </div>
           <div class="card-body">
-            <div class="card-tags">
-              <span class="tag" data-zh="立體幾何" data-en="Solid Geometry">立體幾何</span>
-              <span class="tag" data-zh="三角" data-en="Trigonometry">三角</span>
-            </div>
             <h3 class="card-title" data-zh="3D 立體三角" data-en="3D Solid Geometry">3D 立體三角</h3>
-            <p class="card-desc" data-zh="輸入邊長與角度，自動計算立體圖形的未知量，並以 LaTeX 顯示完整計算步驟（正弦定理、餘弦定理）。支援 PDF 匯出及 PWA 離線使用。" data-en="Input side lengths and angles to automatically solve 3D geometry problems. Full step-by-step LaTeX solutions using sine and cosine rules. Supports PDF export and PWA offline use.">輸入邊長與角度，自動計算立體圖形的未知量，並以 LaTeX 顯示完整計算步驟（正弦定理、餘弦定理）。支援 PDF 匯出及 PWA 離線使用。</p>
-            <div class="card-features">
-              <span class="feature" data-zh="✦ 餘弦 / 正弦定理" data-en="✦ Cosine / Sine Rule">✦ 餘弦 / 正弦定理</span>
-              <span class="feature" data-zh="✦ LaTeX 步驟" data-en="✦ LaTeX Steps">✦ LaTeX 步驟</span>
-              <span class="feature" data-zh="✦ PDF 匯出" data-en="✦ PDF Export">✦ PDF 匯出</span>
-            </div>
+            <p class="card-desc" data-zh="輸入邊長與角度，自動計算立體圖形的未知量，以 LaTeX 顯示完整步驟。" data-en="Input side lengths and angles to solve 3D geometry problems with full LaTeX step-by-step solutions.">輸入邊長與角度，自動計算立體圖形的未知量，以 LaTeX 顯示完整步驟。</p>
+            <!-- KaTeX formula -->
+            <div class="card-formula">$$a^2 = b^2 + c^2 - 2bc\cos A$$</div>
+            <ul class="card-features">
+              <li data-zh="正弦 / 餘弦定理逐步推導" data-en="Sine / Cosine Rule step-by-step">正弦 / 餘弦定理逐步推導</li>
+              <li data-zh="LaTeX 格式輸出計算步驟" data-en="LaTeX formatted solution steps">LaTeX 格式輸出計算步驟</li>
+              <li data-zh="PDF 匯出 · PWA 離線支援" data-en="PDF export · PWA offline support">PDF 匯出 · PWA 離線支援</li>
+            </ul>
           </div>
           <div class="card-footer">
-            <a href="https://kingtmc314.github.io/solid-geometry-calculator/" target="_blank" rel="noopener" class="launch-btn">
+            <a href="https://kingtmc314.github.io/solid-geometry-calculator/" target="_blank" rel="noopener" class="launch-btn core-btn">
               <span data-zh="開啟工具" data-en="Launch Tool">開啟工具</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
           </div>
         </article>
@@ -115,138 +167,150 @@
     <!-- ── M2 SECTION ── -->
     <section class="subject-section" id="m2">
       <div class="section-header">
-        <div class="section-tag" data-zh="延伸部分" data-en="Extended Part">延伸部分</div>
-        <h2 class="section-title" data-zh="數學（模組二）" data-en="Mathematics (Module 2)">數學（模組二）</h2>
+        <div class="section-pill m2-pill" data-zh="延伸部分" data-en="Extended Part">延伸部分</div>
+        <h2 class="section-title" data-zh="數學 (M2)" data-en="Mathematics (M2)">數學 (M2)</h2>
         <p class="section-desc" data-zh="涵蓋微積分、線性代數、級數等 M2 核心主題的互動工具" data-en="Interactive tools covering calculus, linear algebra, series and other core M2 topics">涵蓋微積分、線性代數、級數等 M2 核心主題的互動工具</p>
       </div>
       <div class="cards-grid">
 
         <!-- Card: Linear Algebra Lab -->
-        <article class="tool-card" data-category="m2">
-          <div class="card-icon-wrap">
-            <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="8" width="18" height="14" rx="2" stroke="#D4A843" stroke-width="2" fill="none"/>
-              <rect x="26" y="8" width="18" height="14" rx="2" stroke="#6B9BD2" stroke-width="2" fill="none"/>
-              <rect x="4" y="28" width="18" height="14" rx="2" stroke="#6B9BD2" stroke-width="2" fill="none"/>
-              <rect x="26" y="28" width="18" height="14" rx="2" stroke="#D4A843" stroke-width="2" fill="none"/>
-              <text x="10" y="19" fill="#D4A843" font-size="8" font-family="serif">a b</text>
-              <text x="32" y="19" fill="#6B9BD2" font-size="8" font-family="serif">c d</text>
-            </svg>
+        <article class="tool-card">
+          <div class="card-top">
+            <div class="card-icon-box m2-icon">
+              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                <rect x="5" y="9" width="20" height="16" rx="2.5" stroke="currentColor" stroke-width="2" fill="none"/>
+                <rect x="31" y="9" width="20" height="16" rx="2.5" stroke="currentColor" stroke-width="2" fill="none"/>
+                <rect x="5" y="31" width="20" height="16" rx="2.5" stroke="currentColor" stroke-width="2" fill="none"/>
+                <rect x="31" y="31" width="20" height="16" rx="2.5" stroke="currentColor" stroke-width="2" fill="none"/>
+                <text x="11" y="21" fill="currentColor" font-size="7" font-family="serif" opacity="0.85">a  b</text>
+                <text x="37" y="21" fill="currentColor" font-size="7" font-family="serif" opacity="0.85">c  d</text>
+              </svg>
+            </div>
+            <div class="card-tags">
+              <span class="tag m2-tag" data-zh="矩陣" data-en="Matrices">矩陣</span>
+              <span class="tag m2-tag" data-zh="特徵值" data-en="Eigenvalues">特徵值</span>
+              <span class="tag m2-tag" data-zh="線性方程" data-en="Linear Equations">線性方程</span>
+            </div>
           </div>
           <div class="card-body">
-            <div class="card-tags">
-              <span class="tag" data-zh="矩陣" data-en="Matrices">矩陣</span>
-              <span class="tag" data-zh="特徵值" data-en="Eigenvalues">特徵值</span>
-              <span class="tag" data-zh="線性方程" data-en="Linear Equations">線性方程</span>
-            </div>
             <h3 class="card-title" data-zh="Linear Algebra Lab" data-en="Linear Algebra Lab">Linear Algebra Lab</h3>
-            <p class="card-desc" data-zh="矩陣運算、行列式、逆矩陣、特徵值分解、對角化及矩陣的 n 次方。支援多矩陣運算，所有結果以精確值顯示，並附 2D/3D 變換視覺化。" data-en="Matrix operations, determinants, inverse matrices, eigenvalue decomposition, diagonalisation and matrix nth power. Multi-matrix support with exact-value results and 2D/3D transformation visualisation.">矩陣運算、行列式、逆矩陣、特徵值分解、對角化及矩陣的 n 次方。支援多矩陣運算，所有結果以精確值顯示，並附 2D/3D 變換視覺化。</p>
-            <div class="card-features">
-              <span class="feature" data-zh="✦ 對角化 / Aⁿ" data-en="✦ Diagonalisation / Aⁿ">✦ 對角化 / Aⁿ</span>
-              <span class="feature" data-zh="✦ 精確值輸出" data-en="✦ Exact Values">✦ 精確值輸出</span>
-              <span class="feature" data-zh="✦ 3D 視覺化" data-en="✦ 3D Visualisation">✦ 3D 視覺化</span>
-            </div>
+            <p class="card-desc" data-zh="矩陣運算、行列式、逆矩陣、特徵值分解、對角化及矩陣的 n 次方，所有結果以精確值顯示。" data-en="Matrix operations, determinants, inverse, eigenvalue decomposition, diagonalisation and Aⁿ with exact-value results.">矩陣運算、行列式、逆矩陣、特徵值分解、對角化及矩陣的 n 次方，所有結果以精確值顯示。</p>
+            <div class="card-formula">$$A = P D P^{-1} \implies A^n = P D^n P^{-1}$$</div>
+            <ul class="card-features">
+              <li data-zh="對角化 · 矩陣 n 次方精確值" data-en="Diagonalisation · Exact Aⁿ">對角化 · 矩陣 n 次方精確值</li>
+              <li data-zh="行列式 · 逆矩陣 · 奇異矩陣檢查" data-en="Determinant · Inverse · Singular check">行列式 · 逆矩陣 · 奇異矩陣檢查</li>
+              <li data-zh="2D / 3D 線性變換視覺化" data-en="2D / 3D linear transformation visualisation">2D / 3D 線性變換視覺化</li>
+            </ul>
           </div>
           <div class="card-footer">
-            <a href="https://kingtmc314.github.io/linear-algebra-lab/" target="_blank" rel="noopener" class="launch-btn">
+            <a href="https://kingtmc314.github.io/linear-algebra-lab/" target="_blank" rel="noopener" class="launch-btn m2-btn">
               <span data-zh="開啟工具" data-en="Launch Tool">開啟工具</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
           </div>
         </article>
 
         <!-- Card: Series and Induction Calculator -->
-        <article class="tool-card" data-category="m2">
-          <div class="card-icon-wrap">
-            <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="4" y="30" fill="#D4A843" font-size="28" font-family="serif" font-weight="bold">Σ</text>
-              <text x="26" y="20" fill="#6B9BD2" font-size="10" font-family="serif">n</text>
-              <text x="26" y="36" fill="#6B9BD2" font-size="10" font-family="serif">r=1</text>
-            </svg>
+        <article class="tool-card">
+          <div class="card-top">
+            <div class="card-icon-box m2-icon">
+              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                <text x="5" y="38" fill="currentColor" font-size="34" font-family="Georgia, serif" font-weight="bold" opacity="0.9">Σ</text>
+                <text x="30" y="24" fill="currentColor" font-size="11" font-family="serif" opacity="0.8">n</text>
+                <text x="28" y="40" fill="currentColor" font-size="10" font-family="serif" opacity="0.8">r=1</text>
+              </svg>
+            </div>
+            <div class="card-tags">
+              <span class="tag m2-tag" data-zh="級數" data-en="Series">級數</span>
+              <span class="tag m2-tag" data-zh="數學歸納法" data-en="Induction">數學歸納法</span>
+            </div>
           </div>
           <div class="card-body">
-            <div class="card-tags">
-              <span class="tag" data-zh="級數" data-en="Series">級數</span>
-              <span class="tag" data-zh="數學歸納法" data-en="Induction">數學歸納法</span>
-            </div>
             <h3 class="card-title" data-zh="Series and Induction Calculator" data-en="Series and Induction Calculator">Series and Induction Calculator</h3>
-            <p class="card-desc" data-zh="三大功能：封閉式推導（逐步分解）、數學歸納法完整證明生成、數值計算驗證。內建標準公式參考庫，雙語支援。" data-en="Three modules: closed-form derivation with step-by-step breakdown, full mathematical induction proof generation, and numerical verification. Built-in formula reference library with bilingual support.">三大功能：封閉式推導（逐步分解）、數學歸納法完整證明生成、數值計算驗證。內建標準公式參考庫，雙語支援。</p>
-            <div class="card-features">
-              <span class="feature" data-zh="✦ 封閉式推導" data-en="✦ Closed-form Derivation">✦ 封閉式推導</span>
-              <span class="feature" data-zh="✦ 歸納法證明" data-en="✦ Induction Proof">✦ 歸納法證明</span>
-              <span class="feature" data-zh="✦ 公式速查" data-en="✦ Formula Reference">✦ 公式速查</span>
-            </div>
+            <p class="card-desc" data-zh="封閉式推導、數學歸納法完整證明生成、數值計算驗證，內建標準公式參考庫。" data-en="Closed-form derivation, full induction proof generation, numerical verification, and built-in formula reference.">封閉式推導、數學歸納法完整證明生成、數值計算驗證，內建標準公式參考庫。</p>
+            <div class="card-formula">$$\sum_{r=1}^{n} r^2 = \frac{n(n+1)(2n+1)}{6}$$</div>
+            <ul class="card-features">
+              <li data-zh="封閉式逐步推導（分拆法）" data-en="Closed-form step-by-step derivation">封閉式逐步推導（分拆法）</li>
+              <li data-zh="完整數學歸納法證明生成" data-en="Full mathematical induction proof">完整數學歸納法證明生成</li>
+              <li data-zh="標準公式速查庫" data-en="Standard formula reference library">標準公式速查庫</li>
+            </ul>
           </div>
           <div class="card-footer">
-            <a href="https://kingtmc314.github.io/series-calculator-students/" target="_blank" rel="noopener" class="launch-btn">
+            <a href="https://kingtmc314.github.io/series-calculator-students/" target="_blank" rel="noopener" class="launch-btn m2-btn">
               <span data-zh="開啟工具" data-en="Launch Tool">開啟工具</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
           </div>
         </article>
 
         <!-- Card: Curve Sketching and Differentiation -->
-        <article class="tool-card" data-category="m2">
-          <div class="card-icon-wrap">
-            <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 38 Q12 10 24 24 Q36 38 44 10" stroke="#D4A843" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-              <line x1="4" y1="38" x2="44" y2="38" stroke="#6B9BD2" stroke-width="1.5"/>
-              <line x1="24" y1="4" x2="24" y2="44" stroke="#6B9BD2" stroke-width="1.5"/>
-              <circle cx="24" cy="24" r="3" fill="#D4A843"/>
-              <circle cx="12" cy="14" r="2.5" fill="none" stroke="#D4A843" stroke-width="1.5"/>
-            </svg>
+        <article class="tool-card">
+          <div class="card-top">
+            <div class="card-icon-box m2-icon">
+              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                <line x1="6" y1="44" x2="50" y2="44" stroke="currentColor" stroke-width="1.8" opacity="0.5"/>
+                <line x1="28" y1="6" x2="28" y2="50" stroke="currentColor" stroke-width="1.8" opacity="0.5"/>
+                <path d="M8 40 C14 14 22 34 28 28 C34 22 42 10 50 12" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <circle cx="28" cy="28" r="3.5" fill="currentColor"/>
+                <circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+            </div>
+            <div class="card-tags">
+              <span class="tag m2-tag" data-zh="微分" data-en="Differentiation">微分</span>
+              <span class="tag m2-tag" data-zh="曲線分析" data-en="Curve Analysis">曲線分析</span>
+            </div>
           </div>
           <div class="card-body">
-            <div class="card-tags">
-              <span class="tag" data-zh="微分" data-en="Differentiation">微分</span>
-              <span class="tag" data-zh="曲線分析" data-en="Curve Analysis">曲線分析</span>
-            </div>
             <h3 class="card-title" data-zh="Curve Sketching and Differentiation" data-en="Curve Sketching and Differentiation">Curve Sketching and Differentiation</h3>
-            <p class="card-desc" data-zh="輸入函數，自動計算 f'(x) 和 f''(x)（最簡形式）、定義域、連續性、臨界點（極大、極小、拐點）、單調性、凹凸性及漸近線。繪製 GeoGebra 風格圖形，並可計算任意點的切線方程。" data-en="Input any function to get f'(x) and f''(x) in simplest form, domain, continuity, critical points (max, min, inflection), monotonicity, concavity, and asymptotes. GeoGebra-style graph with tangent line at any point.">輸入函數，自動計算 f'(x) 和 f''(x)（最簡形式）、定義域、連續性、臨界點（極大、極小、拐點）、單調性、凹凸性及漸近線。繪製 GeoGebra 風格圖形，並可計算任意點的切線方程。</p>
-            <div class="card-features">
-              <span class="feature" data-zh="✦ f'(x) / f''(x) 分析" data-en="✦ f'(x) / f''(x) Analysis">✦ f'(x) / f''(x) 分析</span>
-              <span class="feature" data-zh="✦ 臨界點標記" data-en="✦ Critical Points">✦ 臨界點標記</span>
-              <span class="feature" data-zh="✦ 切線方程" data-en="✦ Tangent Line">✦ 切線方程</span>
-            </div>
+            <p class="card-desc" data-zh="自動計算 f'(x) 和 f''(x)、臨界點、單調性、凹凸性及漸近線，繪製 GeoGebra 風格圖形。" data-en="Auto-compute f'(x) and f''(x), critical points, monotonicity, concavity and asymptotes with GeoGebra-style graphs.">自動計算 f'(x) 和 f''(x)、臨界點、單調性、凹凸性及漸近線，繪製 GeoGebra 風格圖形。</p>
+            <div class="card-formula">$$f''(x) > 0 \Rightarrow \text{concave up}$$</div>
+            <ul class="card-features">
+              <li data-zh="f'(x) / f''(x) 最簡形式分析" data-en="f'(x) / f''(x) in simplest form">f'(x) / f''(x) 最簡形式分析</li>
+              <li data-zh="臨界點（極大、極小、拐點）標記" data-en="Critical points (max, min, inflection)">臨界點（極大、極小、拐點）標記</li>
+              <li data-zh="任意點切線方程計算" data-en="Tangent line equation at any point">任意點切線方程計算</li>
+            </ul>
           </div>
           <div class="card-footer">
-            <a href="https://kingtmc314.github.io/curve-analyzer/" target="_blank" rel="noopener" class="launch-btn">
+            <a href="https://kingtmc314.github.io/curve-analyzer/" target="_blank" rel="noopener" class="launch-btn m2-btn">
               <span data-zh="開啟工具" data-en="Launch Tool">開啟工具</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
           </div>
         </article>
 
         <!-- Card: Integration -->
-        <article class="tool-card" data-category="m2">
-          <div class="card-icon-wrap">
-            <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 6 Q10 24 14 42" stroke="#D4A843" stroke-width="3" fill="none" stroke-linecap="round"/>
-              <path d="M20 16 Q28 10 32 24 Q36 38 28 38" stroke="#6B9BD2" stroke-width="2" fill="none"/>
-              <path d="M20 38 L32 38" stroke="#6B9BD2" stroke-width="1.5" stroke-dasharray="3,2"/>
-              <path d="M20 16 L32 16" stroke="#6B9BD2" stroke-width="1.5" stroke-dasharray="3,2"/>
-              <text x="36" y="22" fill="#D4A843" font-size="10" font-family="serif">b</text>
-              <text x="36" y="42" fill="#D4A843" font-size="10" font-family="serif">a</text>
-            </svg>
+        <article class="tool-card">
+          <div class="card-top">
+            <div class="card-icon-box m2-icon">
+              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                <path d="M18 8 Q13 28 18 48" stroke="currentColor" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                <path d="M24 18 Q32 12 38 28 Q44 44 34 44" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+                <line x1="24" y1="44" x2="34" y2="44" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.5"/>
+                <line x1="24" y1="18" x2="34" y2="18" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.5"/>
+                <text x="40" y="22" fill="currentColor" font-size="11" font-family="serif" opacity="0.8">b</text>
+                <text x="40" y="48" fill="currentColor" font-size="11" font-family="serif" opacity="0.8">a</text>
+              </svg>
+            </div>
+            <div class="card-tags">
+              <span class="tag m2-tag" data-zh="積分" data-en="Integration">積分</span>
+              <span class="tag m2-tag" data-zh="面積" data-en="Area">面積</span>
+              <span class="tag m2-tag" data-zh="體積" data-en="Volume">體積</span>
+            </div>
           </div>
           <div class="card-body">
-            <div class="card-tags">
-              <span class="tag" data-zh="積分" data-en="Integration">積分</span>
-              <span class="tag" data-zh="面積" data-en="Area">面積</span>
-              <span class="tag" data-zh="體積" data-en="Volume">體積</span>
-            </div>
             <h3 class="card-title" data-zh="Integration：Area and Volume" data-en="Integration：Area and Volume">Integration：Area and Volume</h3>
-            <p class="card-desc" data-zh="計算曲線圍成的面積及旋轉體體積。支援多種積分方法，逐步顯示計算過程，精確值輸出。內建預設題目庫，適合練習各類積分題型。" data-en="Calculate areas bounded by curves and volumes of revolution. Multiple integration methods with step-by-step solutions and exact-value output. Built-in preset question bank for practice.">計算曲線圍成的面積及旋轉體體積。支援多種積分方法，逐步顯示計算過程，精確值輸出。內建預設題目庫，適合練習各類積分題型。</p>
-            <div class="card-features">
-              <span class="feature" data-zh="✦ 面積 / 體積" data-en="✦ Area / Volume">✦ 面積 / 體積</span>
-              <span class="feature" data-zh="✦ 逐步解法" data-en="✦ Step-by-step">✦ 逐步解法</span>
-              <span class="feature" data-zh="✦ 預設題目庫" data-en="✦ Preset Questions">✦ 預設題目庫</span>
-            </div>
+            <p class="card-desc" data-zh="計算曲線圍成的面積及旋轉體體積，逐步顯示計算過程，精確值輸出，內建預設題目庫。" data-en="Calculate areas bounded by curves and volumes of revolution with step-by-step exact-value solutions and preset questions.">計算曲線圍成的面積及旋轉體體積，逐步顯示計算過程，精確值輸出，內建預設題目庫。</p>
+            <div class="card-formula">$$V = \pi\int_a^b [f(x)]^2\,dx$$</div>
+            <ul class="card-features">
+              <li data-zh="面積 · 旋轉體體積計算" data-en="Area · Volume of revolution">面積 · 旋轉體體積計算</li>
+              <li data-zh="精確值逐步解法顯示" data-en="Exact-value step-by-step solutions">精確值逐步解法顯示</li>
+              <li data-zh="內建預設題目庫練習" data-en="Built-in preset question bank">內建預設題目庫練習</li>
+            </ul>
           </div>
           <div class="card-footer">
-            <a href="https://kingtmc314.github.io/integcalc-lab/" target="_blank" rel="noopener" class="launch-btn">
+            <a href="https://kingtmc314.github.io/integcalc-lab/" target="_blank" rel="noopener" class="launch-btn m2-btn">
               <span data-zh="開啟工具" data-en="Launch Tool">開啟工具</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
           </div>
         </article>
@@ -259,15 +323,19 @@
   <!-- ── FOOTER ── -->
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-brand">
-        <span class="brand-sigma">Σ</span>
-        <span data-zh="數學學習資源中心" data-en="Maths Learning Hub">數學學習資源中心</span>
+      <div class="footer-left">
+        <div class="footer-brand">
+          <span class="brand-sigma small-sigma">Σ</span>
+          <span data-zh="數學學習資源中心" data-en="Maths Learning Hub">數學學習資源中心</span>
+        </div>
+        <p class="footer-note" data-zh="為 HKDSE 學生而設的互動數學工具集" data-en="Interactive mathematics tools for HKDSE students">為 HKDSE 學生而設的互動數學工具集</p>
       </div>
-      <p class="footer-note" data-zh="為 HKDSE 學生而設的互動數學工具集" data-en="Interactive mathematics tools for HKDSE students">為 HKDSE 學生而設的互動數學工具集</p>
-      <a href="https://github.com/kingtmc314" target="_blank" rel="noopener" class="footer-gh">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        <span>GitHub</span>
-      </a>
+      <div class="footer-right">
+        <a href="https://github.com/kingtmc314/maths-hub" target="_blank" rel="noopener" class="footer-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          Source Code
+        </a>
+      </div>
     </div>
   </footer>
 
