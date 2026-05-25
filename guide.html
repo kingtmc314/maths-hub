@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>使用說明 | Maths Learning Hub</title>
+  <meta name="description" content="數學學習資源中心所有工具的詳細使用說明。" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"
+    onload="(function(){
+      var opts = {
+        delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '\\(', right: '\\)', display: false}
+        ],
+        throwOnError: false
+      };
+      document.querySelectorAll('.math-block, .math-inline').forEach(function(el){
+        renderMathInElement(el, opts);
+      });
+    })();"></script>
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Guide-specific styles ── */
+    .guide-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 0;
+      min-height: calc(100vh - 64px);
+      margin-top: 64px;
+    }
+    .guide-sidebar {
+      position: sticky;
+      top: 64px;
+      height: calc(100vh - 64px);
+      overflow-y: auto;
+      background: #f8fafc;
+      border-right: 1px solid #e2e8f0;
+      padding: 2rem 0;
+    }
+    .sidebar-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #94a3b8;
+      padding: 0 1.5rem 0.75rem;
+    }
+    .sidebar-nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .sidebar-nav li a {
+      display: block;
+      padding: 0.45rem 1.5rem;
+      font-size: 0.875rem;
+      color: #475569;
+      text-decoration: none;
+      border-left: 3px solid transparent;
+      transition: all 0.15s ease;
+      font-family: 'Inter', sans-serif;
+    }
+    .sidebar-nav li a:hover {
+      color: #1e40af;
+      background: #eff6ff;
+      border-left-color: #3b82f6;
+    }
+    .sidebar-nav li a.active {
+      color: #1e40af;
+      background: #eff6ff;
+      border-left-color: #1d4ed8;
+      font-weight: 600;
+    }
+    .sidebar-nav .nav-sub {
+      padding-left: 2.5rem;
+      font-size: 0.8rem;
+      color: #64748b;
+    }
+    .sidebar-nav .nav-sub:hover {
+      color: #1e40af;
+    }
+    .sidebar-section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #94a3b8;
+      padding: 1rem 1.5rem 0.3rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .guide-content {
+      padding: 3rem 4rem 6rem;
+      max-width: 860px;
+    }
+    .guide-hero {
+      background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 60%, #0e7490 100%);
+      color: white;
+      padding: 3rem 4rem;
+      margin-top: 64px;
+    }
+    .guide-hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 100px;
+      padding: 0.3rem 1rem;
+      font-size: 0.78rem;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+    .guide-hero h1 {
+      font-family: 'Source Serif 4', 'Noto Serif TC', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin: 0 0 0.75rem;
+      line-height: 1.2;
+    }
+    .guide-hero p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      opacity: 0.85;
+      margin: 0;
+      max-width: 600px;
+    }
+    .guide-meta {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      opacity: 0.75;
+    }
+    .guide-meta span { display: flex; align-items: center; gap: 0.4rem; }
+
+    /* Content styles */
+    .guide-content h2 {
+      font-family: 'Source Serif 4', 'Noto Serif TC', serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 3rem 0 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid #e2e8f0;
+      scroll-margin-top: 80px;
+    }
+    .guide-content h2:first-child { margin-top: 0; }
+    .guide-content h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin: 2rem 0 0.75rem;
+      scroll-margin-top: 80px;
+    }
+    .guide-content h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #334155;
+      margin: 1.5rem 0 0.5rem;
+    }
+    .guide-content p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #334155;
+      margin: 0 0 1rem;
+    }
+    .guide-content ul, .guide-content ol {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #334155;
+      padding-left: 1.5rem;
+      margin: 0 0 1rem;
+    }
+    .guide-content li { margin-bottom: 0.3rem; }
+    .guide-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.25rem 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.875rem;
+    }
+    .guide-content th {
+      background: #f1f5f9;
+      color: #1e293b;
+      font-weight: 600;
+      padding: 0.65rem 1rem;
+      text-align: left;
+      border: 1px solid #e2e8f0;
+    }
+    .guide-content td {
+      padding: 0.6rem 1rem;
+      border: 1px solid #e2e8f0;
+      color: #334155;
+      vertical-align: top;
+    }
+    .guide-content tr:nth-child(even) td { background: #f8fafc; }
+    .guide-content code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 0.1em 0.4em;
+      color: #0f172a;
+    }
+    .guide-content blockquote {
+      border-left: 4px solid #3b82f6;
+      background: #eff6ff;
+      padding: 0.75rem 1.25rem;
+      margin: 1.25rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .guide-content blockquote p {
+      margin: 0;
+      color: #1e40af;
+      font-size: 0.9rem;
+    }
+    .math-block {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      margin: 1rem 0;
+      overflow-x: auto;
+      text-align: center;
+    }
+    .tool-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+      border: 1px solid #bae6fd;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .tool-header-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .tool-header-icon.core { background: linear-gradient(135deg, #fef3c7, #fde68a); }
+    .tool-header-icon.m2 { background: linear-gradient(135deg, #d1fae5, #a7f3d0); }
+    .tool-header-info { flex: 1; }
+    .tool-header-title {
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 0.2rem;
+    }
+    .tool-header-link {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: #0369a1;
+      text-decoration: none;
+    }
+    .tool-header-link:hover { text-decoration: underline; }
+    .tool-badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.04em;
+    }
+    .badge-core { background: #fef3c7; color: #92400e; }
+    .badge-m2 { background: #d1fae5; color: #065f46; }
+    .step-list {
+      counter-reset: step-counter;
+      list-style: none;
+      padding: 0;
+    }
+    .step-list li {
+      counter-increment: step-counter;
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      align-items: flex-start;
+    }
+    .step-list li::before {
+      content: counter(step-counter);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      background: #1d4ed8;
+      color: white;
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+    }
+    .toc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+    }
+    .toc-card {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.85rem 1rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #1e293b;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      background: white;
+    }
+    .toc-card:hover {
+      border-color: #3b82f6;
+      background: #eff6ff;
+      color: #1e40af;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(59,130,246,0.12);
+    }
+    .toc-card-num {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .toc-card-num.core { background: #fef3c7; color: #92400e; }
+    .toc-card-num.m2 { background: #d1fae5; color: #065f46; }
+    .faq-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+    }
+    .faq-q {
+      padding: 1rem 1.25rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #1e293b;
+      background: #f8fafc;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-q:hover { background: #eff6ff; color: #1e40af; }
+    .faq-a {
+      padding: 0 1.25rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-a.open {
+      max-height: 300px;
+      padding: 1rem 1.25rem;
+    }
+    .faq-a p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #475569;
+    }
+    @media (max-width: 900px) {
+      .guide-layout { grid-template-columns: 1fr; }
+      .guide-sidebar { display: none; }
+      .guide-content { padding: 2rem 1.5rem 4rem; }
+      .guide-hero { padding: 2rem 1.5rem; }
+      .guide-hero h1 { font-size: 1.7rem; }
+      .toc-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-logo">
+          <span class="brand-sigma">Σ</span>
+        </div>
+        <div class="brand-text-wrap">
+          <span class="brand-text" data-zh="數學學習資源中心" data-en="Maths Learning Hub">數學學習資源中心</span>
+          <span class="brand-sub">HKDSE Mathematics</span>
+        </div>
+      </a>
+      <div class="nav-right">
+        <a href="index.html#core" class="nav-link" data-zh="必修" data-en="Core">必修</a>
+        <a href="index.html#m2" class="nav-link" data-zh="M2" data-en="M2">M2</a>
+        <a href="guide.html" class="nav-link active" data-zh="使用說明" data-en="Guide">使用說明</a>
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span id="langLabel">EN</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── GUIDE HERO ── -->
+  <div class="guide-hero">
+    <div class="guide-hero-badge" data-zh="工具使用說明文檔" data-en="Tool User Guide Documentation">工具使用說明文檔</div>
+    <h1 data-zh="使用說明" data-en="User Guide">使用說明</h1>
+    <p data-zh="涵蓋所有 7 個數學互動工具的詳細操作指南，包括輸入格式、功能說明及使用技巧。" data-en="Detailed operation guide for all 7 interactive mathematics tools, including input formats, feature descriptions and usage tips.">涵蓋所有 7 個數學互動工具的詳細操作指南，包括輸入格式、功能說明及使用技巧。</p>
+    <div class="guide-meta">
+      <span>📚 <span data-zh="7 個工具" data-en="7 Tools">7 個工具</span></span>
+      <span>🎓 HKDSE 數學必修 &amp; M2</span>
+      <span>🌐 <span data-zh="中英雙語" data-en="Bilingual ZH/EN">中英雙語</span></span>
+    </div>
+  </div>
+
+  <!-- ── MAIN LAYOUT ── -->
+  <div class="guide-layout">
+
+    <!-- Sidebar TOC -->
+    <aside class="guide-sidebar">
+      <div class="sidebar-title" data-zh="目錄" data-en="Contents">目錄</div>
+      <ul class="sidebar-nav">
+        <li><a href="#overview" data-zh="平台概覽" data-en="Platform Overview">平台概覽</a></li>
+        <li class="sidebar-section-label" data-zh="數學（必修）" data-en="Core Mathematics">數學（必修）</li>
+        <li><a href="#trig" data-zh="三角計算器（2D &amp; 3D）" data-en="Trigonometry Calculator">三角計算器（2D &amp; 3D）</a></li>
+        <li><a href="#pc" data-zh="排列、組合及概率" data-en="P&amp;C &amp; Probability">排列、組合及概率</a></li>
+        <li class="sidebar-section-label" data-zh="數學 (M2) — 代數" data-en="M2 — Algebra">M2 — 代數</li>
+        <li><a href="#linalg" data-zh="線性代數實驗室" data-en="Linear Algebra Lab">線性代數實驗室</a></li>
+        <li><a href="#series" data-zh="級數與歸納法計算器" data-en="Series &amp; Induction">級數與歸納法計算器</a></li>
+        <li class="sidebar-section-label" data-zh="數學 (M2) — 微積分" data-en="M2 — Calculus">M2 — 微積分</li>
+        <li><a href="#diff" data-zh="微分與曲線描繪" data-en="Differentiation &amp; Curve">微分與曲線描繪</a></li>
+        <li><a href="#intav" data-zh="積分：面積與體積" data-en="Integration: Area &amp; Volume">積分：面積與體積</a></li>
+        <li><a href="#indef" data-zh="不定積分與定積分" data-en="Indefinite &amp; Definite Int.">不定積分與定積分</a></li>
+        <li class="sidebar-section-label" data-zh="其他" data-en="Other">其他</li>
+        <li><a href="#faq" data-zh="常見問題" data-en="FAQ">常見問題 FAQ</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="guide-content">
+
+      <!-- Overview -->
+      <section id="overview">
+        <h2 data-zh="平台概覽" data-en="Platform Overview">平台概覽</h2>
+        <p data-zh="數學學習資源中心是一個整合 HKDSE 數學必修及 M2 互動工具的學習入口網站。所有工具均以精確值（分數、根號、π）輸出答案，並以 LaTeX 格式顯示完整解題步驟，支援中英文介面切換。" data-en="The Maths Learning Hub is a curated portal integrating interactive tools for HKDSE Core Mathematics and Module 2 (M2). All tools output exact-value answers (fractions, surds, π) with full LaTeX step-by-step working, and support bilingual (Chinese/English) interface switching.">數學學習資源中心是一個整合 HKDSE 數學必修及 M2 互動工具的學習入口網站。所有工具均以精確值（分數、根號、π）輸出答案，並以 LaTeX 格式顯示完整解題步驟，支援中英文介面切換。</p>
+
+        <div class="toc-grid">
+          <a href="#trig" class="toc-card">
+            <span class="toc-card-num core">1</span>
+            <span data-zh="三角計算器（2D &amp; 3D）" data-en="Trigonometry Calculator (2D &amp; 3D)">三角計算器（2D &amp; 3D）</span>
+          </a>
+          <a href="#pc" class="toc-card">
+            <span class="toc-card-num core">2</span>
+            <span data-zh="排列、組合及概率" data-en="Permutation, Combination &amp; Probability">排列、組合及概率</span>
+          </a>
+          <a href="#linalg" class="toc-card">
+            <span class="toc-card-num m2">3</span>
+            <span data-zh="線性代數實驗室" data-en="Linear Algebra Lab">線性代數實驗室</span>
+          </a>
+          <a href="#series" class="toc-card">
+            <span class="toc-card-num m2">4</span>
+            <span data-zh="級數與歸納法計算器" data-en="Series and Induction Calculator">級數與歸納法計算器</span>
+          </a>
+          <a href="#diff" class="toc-card">
+            <span class="toc-card-num m2">5</span>
+            <span data-zh="微分與曲線描繪" data-en="Differentiation and Curve Sketching">微分與曲線描繪</span>
+          </a>
+          <a href="#intav" class="toc-card">
+            <span class="toc-card-num m2">6</span>
+            <span data-zh="積分：面積與體積" data-en="Integration: Area and Volume">積分：面積與體積</span>
+          </a>
+          <a href="#indef" class="toc-card">
+            <span class="toc-card-num m2">7</span>
+            <span data-zh="不定積分與定積分" data-en="Indefinite &amp; Definite Integration">不定積分與定積分</span>
+          </a>
+        </div>
+
+        <blockquote>
+          <p data-zh="💡 語言切換：點擊各工具右上角的「中 / EN」按鈕即可切換介面語言，設定自動儲存。" data-en="💡 Language Toggle: Click the 'EN / 中' button at the top-right of each tool to switch interface language. The setting is saved automatically.">💡 語言切換：點擊各工具右上角的「中 / EN」按鈕即可切換介面語言，設定自動儲存。</p>
+        </blockquote>
+      </section>
+
+      <!-- Tool 1: Trigonometry -->
+      <section id="trig">
+        <h2>
+          <span data-zh="三角計算器（2D &amp; 3D）" data-en="Trigonometry Calculator (2D &amp; 3D)">三角計算器（2D &amp; 3D）</span>
+        </h2>
+        <div class="tool-header">
+          <div class="tool-header-icon core">📐</div>
+          <div class="tool-header-info">
+            <div class="tool-header-title" data-zh="三角計算器（2D &amp; 3D）" data-en="Trigonometry Calculator (2D &amp; 3D)">三角計算器（2D &amp; 3D）</div>
+            <a href="https://kingtmc314.github.io/solid-geometry-calculator/" target="_blank" rel="noopener" class="tool-header-link">kingtmc314.github.io/solid-geometry-calculator/ ↗</a>
+          </div>
+          <span class="tool-badge badge-core" data-zh="必修" data-en="Core">必修</span>
+        </div>
+
+        <p data-zh="涵蓋平面（2D）及立體（3D）三角計算，適用於正弦定理、餘弦定理及立體幾何題型。" data-en="Covers both 2D plane and 3D solid trigonometry, suitable for Sine Rule, Cosine Rule and solid geometry problems.">涵蓋平面（2D）及立體（3D）三角計算，適用於正弦定理、餘弦定理及立體幾何題型。</p>
+
+        <h3 data-zh="操作步驟" data-en="How to Use">操作步驟</h3>
+        <ol class="step-list">
+          <li><span data-zh="選擇底面多邊形類型（三角形、正方形、五邊形或六邊形），並自訂頂點標籤（預設 A/B/C）。" data-en="Select the base polygon type (triangle, square, pentagon or hexagon) and customise vertex labels (default A/B/C).">選擇底面多邊形類型（三角形、正方形、五邊形或六邊形），並自訂頂點標籤（預設 A/B/C）。</span></li>
+          <li><span data-zh="在「輸入已知數據」欄位輸入已知的邊長或角度（°）。至少需要三個已知量（其中至少一個為邊長）。" data-en="Enter known side lengths or angles (°) in the input fields. At least three known values are required, including at least one side length.">在「輸入已知數據」欄位輸入已知的邊長或角度（°）。至少需要三個已知量（其中至少一個為邊長）。</span></li>
+          <li><span data-zh="計算器自動求解，並在「步驟」標籤顯示完整 LaTeX 解題過程。" data-en="The calculator solves automatically and displays full LaTeX working in the 'Steps' tab.">計算器自動求解，並在「步驟」標籤顯示完整 LaTeX 解題過程。</span></li>
+          <li><span data-zh="如需立體幾何計算，點擊「升成立體 →」按鈕，輸入高度或其他立體已知量。" data-en="For 3D solid geometry, click 'Elevate to 3D →' and enter the height or other 3D measurements.">如需立體幾何計算，點擊「升成立體 →」按鈕，輸入高度或其他立體已知量。</span></li>
+          <li><span data-zh="點擊「匯出 PDF」可將完整解題步驟匯出為 PDF 文件。" data-en="Click 'Export PDF' to download the full solution as a PDF document.">點擊「匯出 PDF」可將完整解題步驟匯出為 PDF 文件。</span></li>
+        </ol>
+
+        <h3 data-zh="結果標籤說明" data-en="Result Tabs">結果標籤說明</h3>
+        <table>
+          <thead><tr><th data-zh="標籤" data-en="Tab">標籤</th><th data-zh="內容" data-en="Content">內容</th></tr></thead>
+          <tbody>
+            <tr><td data-zh="步驟" data-en="Steps">步驟</td><td data-zh="逐步 LaTeX 解題過程，標明所用定理" data-en="Step-by-step LaTeX working with theorem labels">逐步 LaTeX 解題過程，標明所用定理</td></tr>
+            <tr><td data-zh="結果" data-en="Results">結果</td><td data-zh="所有邊長與角度的精確值及小數近似值" data-en="Exact and decimal values for all sides and angles">所有邊長與角度的精確值及小數近似值</td></tr>
+            <tr><td data-zh="四心" data-en="Four Centres">四心</td><td data-zh="內心、外心、垂心、重心坐標" data-en="Incentre, circumcentre, orthocentre, centroid coordinates">內心、外心、垂心、重心坐標</td></tr>
+            <tr><td data-zh="面積" data-en="Area">面積</td><td data-zh="三角形面積計算（含公式）" data-en="Triangle area with formula">三角形面積計算（含公式）</td></tr>
+          </tbody>
+        </table>
+
+        <div class="math-block">$$a^2 = b^2 + c^2 - 2bc\cos A \qquad \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}$$</div>
+      </section>
+
+      <!-- Tool 2: P&C -->
+      <section id="pc">
+        <h2 data-zh="排列、組合及概率" data-en="Permutation, Combination &amp; Probability">排列、組合及概率</h2>
+        <div class="tool-header">
+          <div class="tool-header-icon core">🎲</div>
+          <div class="tool-header-info">
+            <div class="tool-header-title" data-zh="排列、組合及概率" data-en="Permutation, Combination &amp; Probability">排列、組合及概率</div>
+            <a href="https://kingtmc314.github.io/dse-pc-prob-calculator/" target="_blank" rel="noopener" class="tool-header-link">kingtmc314.github.io/dse-pc-prob-calculator/ ↗</a>
+          </div>
+          <span class="tool-badge badge-core" data-zh="必修" data-en="Core">必修</span>
+        </div>
+
+        <p data-zh="以互動故事情境引導學習排列、組合及概率計算，採用五步引導式介面。" data-en="Guides learning of permutations, combinations and probability through interactive story scenarios with a five-step guided interface.">以互動故事情境引導學習排列、組合及概率計算，採用五步引導式介面。</p>
+
+        <h3 data-zh="五步引導流程" data-en="Five-Step Guided Flow">五步引導流程</h3>
+        <table>
+          <thead><tr><th data-zh="步驟" data-en="Step">步驟</th><th data-zh="操作" data-en="Action">操作</th></tr></thead>
+          <tbody>
+            <tr><td data-zh="第一步：選情境" data-en="Step 1: Choose Scenario">第一步：選情境</td><td data-zh="選擇故事背景（辦公室選拔、影畢業相、茶餐廳點菜、家庭聚餐）" data-en="Choose a story scenario (office selection, graduation photo, restaurant ordering, family gathering)">選擇故事背景（辦公室選拔、影畢業相、茶餐廳點菜、家庭聚餐）</td></tr>
+            <tr><td data-zh="第二步：設數量" data-en="Step 2: Set Numbers">第二步：設數量</td><td data-zh="輸入各類別的人數或物品數量" data-en="Enter the number of people or items in each category">輸入各類別的人數或物品數量</td></tr>
+            <tr><td data-zh="第三步：選動作" data-en="Step 3: Choose Action">第三步：選動作</td><td data-zh="選擇計算類型（排列 / 組合 / 概率）" data-en="Select calculation type (Permutation / Combination / Probability)">選擇計算類型（排列 / 組合 / 概率）</td></tr>
+            <tr><td data-zh="第四步：加條件" data-en="Step 4: Add Conditions">第四步：加條件</td><td data-zh="設定限制條件（相鄰、不相鄰、至少、至多等）" data-en="Set constraints (adjacent, non-adjacent, at least, at most, etc.)">設定限制條件（相鄰、不相鄰、至少、至多等）</td></tr>
+            <tr><td data-zh="第五步：看結果" data-en="Step 5: View Results">第五步：看結果</td><td data-zh="查看逐步計算過程及最終答案" data-en="View step-by-step working and final answer">查看逐步計算過程及最終答案</td></tr>
+          </tbody>
+        </table>
+
+        <div class="math-block">$$P(n,r) = \frac{n!}{(n-r)!} \qquad C(n,r) = \frac{n!}{r!(n-r)!} \qquad P(A|B) = \frac{P(A \cap B)}{P(B)}$$</div>
+      </section>
+
+      <!-- Tool 3: Linear Algebra -->
+      <section id="linalg">
+        <h2 data-zh="線性代數實驗室" data-en="Linear Algebra Lab">線性代數實驗室</h2>
+        <div class="tool-header">
+          <div class="tool-header-icon m2">🔢</div>
+          <div class="tool-header-info">
+            <div class="tool-header-title" data-zh="線性代數實驗室" data-en="Linear Algebra Lab">線性代數實驗室</div>
+            <a href="https://kingtmc314.github.io/linear-algebra-lab/" target="_blank" rel="noopener" class="tool-header-link">kingtmc314.github.io/linear-algebra-lab/ ↗</a>
+          </div>
+          <span class="tool-badge badge-m2">M2</span>
+        </div>
+
+        <p data-zh="專為 M2 線性代數設計，所有答案以精確值（分數、根號）輸出，附逐步推導過程，支援 2×2 及 3×3 矩陣。" data-en="Designed for M2 linear algebra, outputting all answers as exact values (fractions, surds) with step-by-step derivations, supporting 2×2 and 3×3 matrices.">專為 M2 線性代數設計，所有答案以精確值（分數、根號）輸出，附逐步推導過程，支援 2×2 及 3×3 矩陣。</p>
+
+        <h3 data-zh="主要功能" data-en="Key Features">主要功能</h3>
+        <table>
+          <thead><tr><th data-zh="功能" data-en="Feature">功能</th><th data-zh="說明" data-en="Description">說明</th></tr></thead>
+          <tbody>
+            <tr><td data-zh="矩陣基本運算" data-en="Basic Matrix Operations">矩陣基本運算</td><td data-zh="加減法、純量乘法、矩陣乘法、轉置" data-en="Addition, subtraction, scalar multiplication, matrix multiplication, transpose">加減法、純量乘法、矩陣乘法、轉置</td></tr>
+            <tr><td data-zh="行列式 det(A)" data-en="Determinant det(A)">行列式 det(A)</td><td data-zh="以展開法逐步計算，顯示完整過程" data-en="Computed by expansion method with full working">以展開法逐步計算，顯示完整過程</td></tr>
+            <tr><td data-zh="逆矩陣 A⁻¹" data-en="Inverse Matrix A⁻¹">逆矩陣 A⁻¹</td><td data-zh="計算前自動檢查奇異性，以精確分數輸出" data-en="Automatically checks singularity before computing, outputs exact fractions">計算前自動檢查奇異性，以精確分數輸出</td></tr>
+            <tr><td data-zh="特徵值與特徵向量" data-en="Eigenvalues &amp; Eigenvectors">特徵值與特徵向量</td><td data-zh="解特徵方程，顯示完整展開過程" data-en="Solves characteristic equation with full expansion">解特徵方程，顯示完整展開過程</td></tr>
+            <tr><td data-zh="對角化 &amp; Aⁿ" data-en="Diagonalisation &amp; Aⁿ">對角化 &amp; Aⁿ</td><td data-zh="建構 P、D 矩陣，計算 A = PDP⁻¹ 及 Aⁿ" data-en="Constructs P, D matrices and computes A = PDP⁻¹ and Aⁿ">建構 P、D 矩陣，計算 A = PDP⁻¹ 及 Aⁿ</td></tr>
+            <tr><td data-zh="線性方程組" data-en="System of Linear Equations">線性方程組</td><td data-zh="高斯消元法，支援唯一解、無解及無限多解" data-en="Gaussian elimination, handles unique, no solution and infinite solutions">高斯消元法，支援唯一解、無解及無限多解</td></tr>
+            <tr><td data-zh="2D/3D 視覺化" data-en="2D/3D Visualisation">2D/3D 視覺化</td><td data-zh="互動圖表展示線性變換的幾何效果" data-en="Interactive charts showing geometric effects of linear transformations">互動圖表展示線性變換的幾何效果</td></tr>
+          </tbody>
+        </table>
+
+        <div class="math-block">$$A = PDP^{-1} \implies A^n = PD^nP^{-1} \qquad \det(A - \lambda I) = 0$$</div>
+
+        <blockquote>
+          <p data-zh="💡 輸入格式：矩陣元素可輸入整數（如 3）、分數（如 1/2）或負數（如 -2）。" data-en="💡 Input Format: Matrix entries accept integers (e.g. 3), fractions (e.g. 1/2) or negative numbers (e.g. -2).">💡 輸入格式：矩陣元素可輸入整數（如 3）、分數（如 1/2）或負數（如 -2）。</p>
+        </blockquote>
+      </section>
+
+      <!-- Tool 4: Series -->
+      <section id="series">
+        <h2 data-zh="級數與歸納法計算器" data-en="Series and Induction Calculator">級數與歸納法計算器</h2>
+        <div class="tool-header">
+          <div class="tool-header-icon m2">Σ</div>
+          <div class="tool-header-info">
+            <div class="tool-header-title" data-zh="級數與歸納法計算器" data-en="Series and Induction Calculator">級數與歸納法計算器</div>
+            <a href="https://seriescalc-mdhgko93.manus.space" target="_blank" rel="noopener" class="tool-header-link">seriescalc-mdhgko93.manus.space ↗</a>
+          </div>
+          <span class="tool-badge badge-m2">M2</span>
+        </div>
+
+        <p data-zh="分為三個部分：封閉式推導、數學歸納法證明及數值計算驗證，涵蓋 M2 級數的完整學習流程。" data-en="Divided into three parts: closed-form derivation, proof by mathematical induction, and numerical verification, covering the complete M2 series learning workflow.">分為三個部分：封閉式推導、數學歸納法證明及數值計算驗證，涵蓋 M2 級數的完整學習流程。</p>
+
+        <h3 data-zh="第一部分：封閉式推導" data-en="Part 1: Closed-Form Derivation">第一部分：封閉式推導</h3>
+        <table>
+          <thead><tr><th data-zh="欄位" data-en="Field">欄位</th><th data-zh="說明" data-en="Description">說明</th><th data-zh="範例" data-en="Example">範例</th></tr></thead>
+          <tbody>
+            <tr><td data-zh="下限" data-en="Lower Limit">下限</td><td data-zh="求和起始值" data-en="Starting value of summation">求和起始值</td><td><code>1</code>、<code>0</code></td></tr>
+            <tr><td data-zh="上限" data-en="Upper Limit">上限</td><td data-zh="求和終止值" data-en="Ending value of summation">求和終止值</td><td><code>n</code>、<code>2n</code></td></tr>
+            <tr><td data-zh="通項" data-en="General Term">通項</td><td data-zh="每一項的表達式" data-en="Expression for each term">每一項的表達式</td><td><code>r^2</code>、<code>r*(r+1)</code>、<code>1/(r*(r+1))</code></td></tr>
+          </tbody>
+        </table>
+
+        <div class="math-block">$$\sum_{r=1}^{n} r = \frac{n(n+1)}{2} \qquad \sum_{r=1}^{n} r^2 = \frac{n(n+1)(2n+1)}{6} \qquad \sum_{r=1}^{n} r^3 = \left[\frac{n(n+1)}{2}\right]^2$$</div>
+
+        <h3 data-zh="第二部分：數學歸納法證明" data-en="Part 2: Proof by Mathematical Induction">第二部分：數學歸納法證明</h3>
+        <p data-zh="完成第一部分後，自動生成完整的第一數學歸納法證明，包含基礎步驟、歸納假設、歸納步驟及結論，以標準考試格式呈現。" data-en="After completing Part 1, automatically generates a complete proof by the first principle of mathematical induction, including base case, inductive hypothesis, inductive step and conclusion in standard exam format.">完成第一部分後，自動生成完整的第一數學歸納法證明，包含基礎步驟、歸納假設、歸納步驟及結論，以標準考試格式呈現。</p>
+
+        <h3 data-zh="第三部分：數值計算驗證" data-en="Part 3: Numerical Verification">第三部分：數值計算驗證</h3>
+        <p data-zh="輸入具體數值上下限，驗算封閉式結果。若上下限與第一部分不同，自動應用分拆求和恆等式 S(a,b) = F(b) − F(a−1)。" data-en="Enter specific numerical limits to verify the closed-form result. If limits differ from Part 1, the split-sum identity S(a,b) = F(b) − F(a−1) is applied automatically.">輸入具體數值上下限，驗算封閉式結果。若上下限與第一部分不同，自動應用分拆求和恆等式 S(a,b) = F(b) − F(a−1)。</p>
+      </section>
+
+      <!-- Tool 5: Differentiation -->
+      <section id="diff">
+        <h2 data-zh="微分與曲線描繪" data-en="Differentiation and Curve Sketching">微分與曲線描繪</h2>
+        <div class="tool-header">
+          <div class="tool-header-icon m2">∂</div>
+          <div class="tool-header-info">
+            <div class="tool-header-title" data-zh="微分與曲線描繪" data-en="Differentiation and Curve Sketching">微分與曲線描繪</div>
+            <a href="https://kingtmc314.github.io/curve-analyzer/" target="_blank" rel="noopener" class="tool-header-link">kingtmc314.github.io/curve-analyzer/ ↗</a>
+          </div>
+          <span class="tool-badge badge-m2">M2</span>
+        </div>
+
+        <p data-zh="提供函數的完整微分分析，包括圖形繪製、導函數計算、曲線特徵分析及切線方程。" data-en="Provides complete differential analysis of functions, including graph plotting, derivative computation, curve feature analysis and tangent line equations.">提供函數的完整微分分析，包括圖形繪製、導函數計算、曲線特徵分析及切線方程。</p>
+
+        <h3 data-zh="完整曲線分析（點擊 Analyze 後）" data-en="Full Curve Analysis (after clicking Analyze)">完整曲線分析（點擊 Analyze 後）</h3>
+        <table>
+          <thead><tr><th data-zh="分析項目" data-en="Analysis Item">分析項目</th><th data-zh="說明" data-en="Description">說明</th></tr></thead>
+          <tbody>
+            <tr><td data-zh="f'(x)（最簡形式）" data-en="f'(x) (simplest form)">f'(x)（最簡形式）</td><td data-zh="一階導函數，化至最簡" data-en="First derivative in simplest form">一階導函數，化至最簡</td></tr>
+            <tr><td data-zh="f''(x)（最簡形式）" data-en="f''(x) (simplest form)">f''(x)（最簡形式）</td><td data-zh="二階導函數，化至最簡" data-en="Second derivative in simplest form">二階導函數，化至最簡</td></tr>
+            <tr><td data-zh="臨界點" data-en="Critical Points">臨界點</td><td data-zh="極大值、極小值及拐點，清晰標示類型" data-en="Local max, local min and inflection points with type labels">極大值、極小值及拐點，清晰標示類型</td></tr>
+            <tr><td data-zh="單調性" data-en="Monotonicity">單調性</td><td data-zh="遞增 / 遞減區間" data-en="Increasing / decreasing intervals">遞增 / 遞減區間</td></tr>
+            <tr><td data-zh="凹凸性" data-en="Concavity">凹凸性</td><td data-zh="上凸 / 下凸區間" data-en="Concave up / concave down intervals">上凸 / 下凸區間</td></tr>
+            <tr><td data-zh="漸近線" data-en="Asymptotes">漸近線</td><td data-zh="水平、垂直及斜漸近線（圖上以虛線標示）" data-en="Horizontal, vertical and oblique asymptotes (shown as dashed lines on graph)">水平、垂直及斜漸近線（圖上以虛線標示）</td></tr>
+            <tr><td data-zh="切線方程" data-en="Tangent Line">切線方程</td><td data-zh="輸入 x = a，輸出斜率 f'(a) 及切線方程" data-en="Input x = a, outputs slope f'(a) and tangent line equation">輸入 x = a，輸出斜率 f'(a) 及切線方程</td></tr>
+          </tbody>
+        </table>
+
+        <h3 data-zh="輸入格式" data-en="Input Format">輸入格式</h3>
+        <table>
+          <thead><tr><th data-zh="函數類型" data-en="Function Type">函數類型</th><th data-zh="輸入範例" data-en="Input Example">輸入範例</th></tr></thead>
+          <tbody>
+            <tr><td data-zh="多項式" data-en="Polynomial">多項式</td><td><code>x^3 - 2*x + 1</code></td></tr>
+            <tr><td data-zh="三角函數" data-en="Trigonometric">三角函數</td><td><code>sin(x)</code>、<code>cos(2*x)</code></td></tr>
+            <tr><td data-zh="指數函數" data-en="Exponential">指數函數</td><td><code>e^x</code>、<code>exp(x)</code></td></tr>
+            <tr><td data-zh="對數函數" data-en="Logarithmic">對數函數</td><td><code>ln(x)</code>、<code>log(x)</code></td></tr>
+            <tr><td data-zh="複合函數" data-en="Composite">複合函數</td><td><code>sin(x^2)</code>、<code>ln(cos(x))</code></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Tool 6: Integration Area & Volume -->
+      <section id="intav">
+        <h2 data-zh="積分：面積與體積" data-en="Integration: Area and Volume">積分：面積與體積</h2>
+        <div class="tool-header">
+          <div class="tool-header-icon m2">∫</div>
+          <div class="tool-header-info">
+            <div class="tool-header-title" data-zh="積分：面積與體積" data-en="Integration: Area and Volume">積分：面積與體積</div>
+            <a href="https://kingtmc314.github.io/integcalc-lab/" target="_blank" rel="noopener" class="tool-header-link">kingtmc314.github.io/integcalc-lab/ ↗</a>
+          </div>
+          <span class="tool-badge badge-m2">M2</span>
+        </div>
+
+        <p data-zh="計算曲線圍成的面積及旋轉體體積，提供精確符號答案、LaTeX 渲染、互動圖形及動畫 3D 旋轉體。" data-en="Calculates areas bounded by curves and volumes of revolution with exact symbolic answers, LaTeX rendering, interactive graphs and animated 3D solids.">計算曲線圍成的面積及旋轉體體積，提供精確符號答案、LaTeX 渲染、互動圖形及動畫 3D 旋轉體。</p>
+
+        <h3 data-zh="體積計算方法" data-en="Volume Calculation Methods">體積計算方法</h3>
+        <table>
+          <thead><tr><th data-zh="方法" data-en="Method">方法</th><th data-zh="適用情況" data-en="When to Use">適用情況</th><th data-zh="公式" data-en="Formula">公式</th></tr></thead>
+          <tbody>
+            <tr>
+              <td data-zh="碟形法" data-en="Disk Method">碟形法</td>
+              <td data-zh="單一曲線繞 x 軸旋轉" data-en="Single curve rotated about x-axis">單一曲線繞 x 軸旋轉</td>
+              <td class="math-inline">\(V = \pi\int_a^b [f(x)]^2\,dx\)</td>
+            </tr>
+            <tr>
+              <td data-zh="環形法" data-en="Washer Method">環形法</td>
+              <td data-zh="兩條曲線繞 x 軸旋轉" data-en="Two curves rotated about x-axis">兩條曲線繞 x 軸旋轉</td>
+              <td class="math-inline">\(V = \pi\int_a^b ([f]^2-[g]^2)\,dx\)</td>
+            </tr>
+            <tr>
+              <td data-zh="殼形法" data-en="Shell Method">殼形法</td>
+              <td data-zh="任意曲線繞 y 軸旋轉" data-en="Any curve rotated about y-axis">任意曲線繞 y 軸旋轉</td>
+              <td class="math-inline">\(V = 2\pi\int_a^b x\,f(x)\,dx\)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <p data-zh="💡 積分限可輸入表達式，如 pi/2、sqrt(2)、ln(3)。工具自動偵測並選用最適合的體積計算方法。" data-en="💡 Integration limits accept expressions such as pi/2, sqrt(2), ln(3). The tool auto-detects and selects the most appropriate volume method.">💡 積分限可輸入表達式，如 pi/2、sqrt(2)、ln(3)。工具自動偵測並選用最適合的體積計算方法。</p>
+        </blockquote>
+
+        <p data-zh="工具內建 16 個預設範例（由基礎至進階），涵蓋多項式面積、三角函數面積及各種旋轉體體積題型。" data-en="The tool includes 16 preset examples (basic to advanced), covering polynomial areas, trigonometric areas and various volume of revolution types.">工具內建 16 個預設範例（由基礎至進階），涵蓋多項式面積、三角函數面積及各種旋轉體體積題型。</p>
+      </section>
+
+      <!-- Tool 7: Indefinite Integration -->
+      <section id="indef">
+        <h2 data-zh="不定積分與定積分" data-en="Indefinite &amp; Definite Integration">不定積分與定積分</h2>
+        <div class="tool-header">
+          <div class="tool-header-icon m2">∫C</div>
+          <div class="tool-header-info">
+            <div class="tool-header-title" data-zh="不定積分與定積分" data-en="Indefinite &amp; Definite Integration">不定積分與定積分</div>
+            <a href="https://kingtmc314.github.io/integral-calculator-students/" target="_blank" rel="noopener" class="tool-header-link">kingtmc314.github.io/integral-calculator-students/ ↗</a>
+          </div>
+          <span class="tool-badge badge-m2">M2</span>
+        </div>
+
+        <p data-zh="專為 HKDSE M2 設計，計算方法限於 M2 課程範圍，以 LaTeX 顯示完整逐步解題過程。" data-en="Designed specifically for HKDSE M2, with calculation methods limited to the M2 curriculum scope, displaying complete step-by-step working in LaTeX.">專為 HKDSE M2 設計，計算方法限於 M2 課程範圍，以 LaTeX 顯示完整逐步解題過程。</p>
+
+        <h3 data-zh="輸入語法" data-en="Input Syntax">輸入語法</h3>
+        <table>
+          <thead><tr><th data-zh="函數類型" data-en="Function Type">函數類型</th><th data-zh="輸入語法" data-en="Input Syntax">輸入語法</th></tr></thead>
+          <tbody>
+            <tr><td data-zh="乘法" data-en="Multiplication">乘法</td><td><code>x*sin(x)</code></td></tr>
+            <tr><td data-zh="次方" data-en="Power">次方</td><td><code>x^3</code></td></tr>
+            <tr><td data-zh="自然對數" data-en="Natural Log">自然對數</td><td><code>ln(x)</code></td></tr>
+            <tr><td data-zh="sec²x" data-en="sec²x">sec²x</td><td><code>sec(x)^2</code></td></tr>
+            <tr><td data-zh="底數 b 對數" data-en="Log base b">底數 b 對數</td><td><code>log(x,b)</code></td></tr>
+          </tbody>
+        </table>
+
+        <h3 data-zh="支援的積分方法（M2 範圍）" data-en="Supported Integration Methods (M2 Scope)">支援的積分方法（M2 範圍）</h3>
+        <ul>
+          <li data-zh="基本公式（多項式、三角、指數、對數）" data-en="Basic formulae (polynomial, trigonometric, exponential, logarithmic)">基本公式（多項式、三角、指數、對數）</li>
+          <li data-zh="代換積分法（Substitution）" data-en="Substitution method">代換積分法（Substitution）</li>
+          <li data-zh="分部積分法（Integration by Parts）" data-en="Integration by Parts">分部積分法（Integration by Parts）</li>
+          <li data-zh="三角代換（限 a sinθ、a cosθ、a tanθ 形式）" data-en="Trigonometric substitution (limited to a sinθ, a cosθ, a tanθ forms)">三角代換（限 a sinθ、a cosθ、a tanθ 形式）</li>
+          <li data-zh="部分分式分解（Partial Fractions）" data-en="Partial Fractions">部分分式分解（Partial Fractions）</li>
+        </ul>
+
+        <div class="math-block">$$\int f(x)\,dx = F(x) + C$$</div>
+
+        <h3 data-zh="頁面結構" data-en="Page Structure">頁面結構</h3>
+        <table>
+          <thead><tr><th data-zh="頁面" data-en="Page">頁面</th><th data-zh="功能" data-en="Function">功能</th></tr></thead>
+          <tbody>
+            <tr><td data-zh="不定積分（主頁）" data-en="Indefinite Integration (Main)">不定積分（主頁）</td><td data-zh="單一不定積分計算" data-en="Single indefinite integral calculation">單一不定積分計算</td></tr>
+            <tr><td data-zh="公式速查（Formulae）" data-en="Formulae">公式速查（Formulae）</td><td data-zh="M2 積分公式參考庫" data-en="M2 integration formula reference library">M2 積分公式參考庫</td></tr>
+            <tr><td data-zh="多題模式（Multi）" data-en="Multi-Problem Mode">多題模式（Multi）</td><td data-zh="批量輸入多道題目，一次計算" data-en="Batch input multiple problems for simultaneous calculation">批量輸入多道題目，一次計算</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <h2 data-zh="常見問題 FAQ" data-en="Frequently Asked Questions">常見問題 FAQ</h2>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span data-zh="工具顯示的答案是近似值還是精確值？" data-en="Are the answers approximate or exact values?">工具顯示的答案是近似值還是精確值？</span>
+            <span>▾</span>
+          </div>
+          <div class="faq-a">
+            <p data-zh="所有工具均以精確值輸出（分數、根號、π、e），不使用近似小數，確保答案符合 HKDSE 考試要求。" data-en="All tools output exact values (fractions, surds, π, e) without approximate decimals, ensuring answers meet HKDSE exam requirements.">所有工具均以精確值輸出（分數、根號、π、e），不使用近似小數，確保答案符合 HKDSE 考試要求。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span data-zh="工具可以在手機上使用嗎？" data-en="Can the tools be used on mobile phones?">工具可以在手機上使用嗎？</span>
+            <span>▾</span>
+          </div>
+          <div class="faq-a">
+            <p data-zh="所有工具均採用響應式設計，支援手機、平板及桌面瀏覽器。建議使用 Chrome 或 Safari 最新版本以獲得最佳體驗。" data-en="All tools use responsive design and support mobile phones, tablets and desktop browsers. Chrome or Safari latest version is recommended for the best experience.">所有工具均採用響應式設計，支援手機、平板及桌面瀏覽器。建議使用 Chrome 或 Safari 最新版本以獲得最佳體驗。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span data-zh="三角計算器需要輸入多少已知量？" data-en="How many known values does the trigonometry calculator need?">三角計算器需要輸入多少已知量？</span>
+            <span>▾</span>
+          </div>
+          <div class="faq-a">
+            <p data-zh="至少需要三個已知量（其中至少一個為邊長）才能唯一求解三角形。若輸入不足，工具會提示缺少資料。" data-en="At least three known values are required (including at least one side length) to uniquely solve a triangle. If insufficient data is entered, the tool will display a prompt.">至少需要三個已知量（其中至少一個為邊長）才能唯一求解三角形。若輸入不足，工具會提示缺少資料。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span data-zh="線性代數實驗室支援哪些矩陣大小？" data-en="What matrix sizes does the Linear Algebra Lab support?">線性代數實驗室支援哪些矩陣大小？</span>
+            <span>▾</span>
+          </div>
+          <div class="faq-a">
+            <p data-zh="目前支援 2×2 及 3×3 矩陣。特徵值分解及對角化功能適用於 2×2 矩陣（M2 課程範圍）。" data-en="Currently supports 2×2 and 3×3 matrices. Eigenvalue decomposition and diagonalisation apply to 2×2 matrices (within M2 curriculum scope).">目前支援 2×2 及 3×3 矩陣。特徵值分解及對角化功能適用於 2×2 矩陣（M2 課程範圍）。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span data-zh="積分工具無法計算某些函數怎麼辦？" data-en="What if the integration tool cannot compute a function?">積分工具無法計算某些函數怎麼辦？</span>
+            <span>▾</span>
+          </div>
+          <div class="faq-a">
+            <p data-zh="若積分超出 M2 課程範圍，工具會顯示提示訊息。此時可嘗試手動化簡後再輸入，或參考公式速查頁面。" data-en="If the integral is beyond M2 curriculum scope, the tool will display a hint message. Try simplifying the expression manually before re-entering, or refer to the Formulae page.">若積分超出 M2 課程範圍，工具會顯示提示訊息。此時可嘗試手動化簡後再輸入，或參考公式速查頁面。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span data-zh="級數計算器支援哪些通項形式？" data-en="What general term forms does the series calculator support?">級數計算器支援哪些通項形式？</span>
+            <span>▾</span>
+          </div>
+          <div class="faq-a">
+            <p data-zh="支援多項式通項（r、r²、r³）、乘積形式（r(r+1)）及部分分式形式（1/(r(r+1))）。不支援含三角函數或指數函數的通項。" data-en="Supports polynomial terms (r, r², r³), product forms (r(r+1)) and partial fraction forms (1/(r(r+1))). Trigonometric or exponential general terms are not supported.">支援多項式通項（r、r²、r³）、乘積形式（r(r+1)）及部分分式形式（1/(r(r+1))）。不支援含三角函數或指數函數的通項。</p>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-brand" data-zh="數學學習資源中心" data-en="Maths Learning Hub">數學學習資源中心</span>
+      <p class="footer-note" data-zh="為 HKDSE 學生而設的互動數學工具集" data-en="Interactive mathematics tools for HKDSE students">為 HKDSE 學生而設的互動數學工具集</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function toggleFaq(el) {
+      var answer = el.nextElementSibling;
+      answer.classList.toggle('open');
+    }
+    // Sidebar active link on scroll
+    var sections = document.querySelectorAll('section[id]');
+    var navLinks = document.querySelectorAll('.sidebar-nav a[href^="#"]');
+    window.addEventListener('scroll', function() {
+      var scrollY = window.scrollY + 100;
+      sections.forEach(function(sec) {
+        if (scrollY >= sec.offsetTop && scrollY < sec.offsetTop + sec.offsetHeight) {
+          navLinks.forEach(function(a) {
+            a.classList.remove('active');
+            if (a.getAttribute('href') === '#' + sec.id) a.classList.add('active');
+          });
+        }
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>
