@@ -616,28 +616,168 @@ body {
   background: var(--indigo-light);
 }
 
-/* ── RESPONSIVE ── */
-@media (max-width: 900px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .hero-formula-panel {
-    grid-template-columns: 1fr 1fr;
-  }
-  .hero-desc { max-width: 100%; }
+/* ── HAMBURGER MENU ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 1.5px solid var(--border-2);
+  border-radius: 9px;
+  cursor: pointer;
+  padding: 8px;
+  transition: background 0.18s, border-color 0.18s;
+  flex-shrink: 0;
+}
+.hamburger:hover { background: var(--indigo-light); border-color: var(--indigo-mid); }
+.hamburger-line {
+  width: 18px;
+  height: 2px;
+  background: var(--text-secondary);
+  border-radius: 2px;
+  transition: transform 0.25s var(--ease-out), opacity 0.2s;
+  transform-origin: center;
+}
+.hamburger.open .hamburger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open .hamburger-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open .hamburger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile drawer */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 64px; left: 0; right: 0;
+  background: rgba(255,255,255,0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  z-index: 99;
+  padding: 16px 1.25rem 20px;
+  flex-direction: column;
+  gap: 4px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-nav-link {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 10px;
+  transition: background 0.18s, color 0.18s;
+  display: block;
+}
+.mobile-nav-link:hover,
+.mobile-nav-link.active { background: var(--indigo-light); color: var(--indigo); }
+.mobile-lang-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  margin-top: 4px;
+  border-top: 1px solid var(--border);
+}
+.mobile-lang-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
 }
 
+/* ── RESPONSIVE ── */
+
+/* Large desktop: 1200px+ — 3-column cards */
+@media (min-width: 1200px) {
+  .cards-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Desktop: 901px–1199px — 2-column cards */
+@media (min-width: 901px) and (max-width: 1199px) {
+  .cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .main-content { padding: 56px 1.5rem 72px; }
+}
+
+/* Tablet: 641px–900px */
+@media (max-width: 900px) {
+  /* Hide desktop nav links, show hamburger */
+  .nav-right .nav-link { display: none; }
+  .nav-right .lang-toggle { display: none; }
+  .hamburger { display: flex; }
+
+  .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+  .hero { padding: 100px 1.5rem 64px; }
+  .hero-formula-panel { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .hero-desc { max-width: 100%; }
+  .hero-title { font-size: clamp(2rem, 5vw, 2.8rem); }
+  .main-content { padding: 52px 1.5rem 64px; }
+  .cards-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+  .section-title { font-size: clamp(1.4rem, 3vw, 1.9rem); }
+  .footer-inner { flex-direction: column; text-align: center; }
+}
+
+/* Large phone: 481px–640px */
 @media (max-width: 640px) {
-  .hero { padding: 100px 1.25rem 60px; }
-  .main-content { padding: 48px 1.25rem 60px; }
-  .nav-inner { padding: 0 1.25rem; }
+  .hero { padding: 88px 1.1rem 52px; }
+  .main-content { padding: 44px 1.1rem 56px; }
+  .nav-inner { padding: 0 1.1rem; }
   .brand-sub { display: none; }
-  .hero-formula-panel { grid-template-columns: 1fr; }
-  .cards-grid { grid-template-columns: 1fr; }
-  .hero-stats { gap: 14px; }
-  .hero-cta { flex-direction: column; }
-  .btn-primary, .btn-ghost { justify-content: center; }
+  .brand-text { font-size: 13.5px; }
+  .hero-formula-panel { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .formula-card { padding: 14px 12px; }
+  .formula-math .katex { font-size: 0.88em; }
+  .cards-grid { grid-template-columns: 1fr; gap: 16px; }
+  .hero-stats { gap: 12px; }
+  .stat-n { font-size: 22px; }
+  .hero-cta { flex-direction: column; gap: 10px; }
+  .btn-primary, .btn-ghost { justify-content: center; width: 100%; }
+  .hero-title { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  .hero-badge { font-size: 10.5px; }
+  .sub-category-header { flex-wrap: wrap; gap: 8px; }
+  .sub-cat-count { margin-left: 0; }
+  .card-title { font-size: 1.05rem; }
+  .card-desc { font-size: 13.5px; }
+  .section-title { font-size: 1.5rem; }
+  .footer-inner { flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+  .footer-links { flex-direction: column; align-items: center; gap: 8px; }
+}
+
+/* Small phone: ≤480px */
+@media (max-width: 480px) {
+  .hero { padding: 76px 0.9rem 44px; }
+  .main-content { padding: 36px 0.9rem 48px; }
+  .nav-inner { padding: 0 0.9rem; height: 56px; }
+  .mobile-menu { top: 56px; }
+  .brand-logo { width: 32px; height: 32px; border-radius: 9px; }
+  .brand-sigma { font-size: 17px; }
+  .brand-text { font-size: 12.5px; }
+  .hero-formula-panel { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .formula-card:nth-child(3),
+  .formula-card:nth-child(4) { display: none; }
+  .hero-title { font-size: clamp(1.55rem, 9vw, 1.9rem); }
+  .hero-badge { padding: 4px 10px; font-size: 10px; }
+  .hero-stats { flex-wrap: wrap; justify-content: center; gap: 8px 14px; }
+  .stat-sep { display: none; }
+  .stat-n { font-size: 20px; }
+  .cards-grid { gap: 12px; }
+  .tool-card { border-radius: var(--radius-lg); }
+  .card-top { padding: 14px 14px 0; }
+  .card-body { padding: 10px 14px; }
+  .card-footer { padding: 12px 14px 14px; }
+  .card-icon-box { width: 46px; height: 46px; }
+  .card-title { font-size: 0.97rem; }
+  .card-desc { font-size: 13px; }
+  .launch-btn { padding: 9px 16px; font-size: 13px; width: 100%; justify-content: center; }
+  .section-title { font-size: 1.3rem; }
+  .section-desc { font-size: 13px; }
+  .sub-category-header { padding: 8px 12px; }
+  .sub-cat-title { font-size: 0.92rem; }
+  .site-footer { padding: 24px 0.9rem; }
+  .hero-cta { gap: 8px; }
+  .btn-primary, .btn-ghost { padding: 11px 18px; font-size: 13.5px; }
 }
 
 /* ── ANIMATIONS ── */

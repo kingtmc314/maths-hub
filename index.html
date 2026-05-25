@@ -51,9 +51,28 @@
         <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
           <span id="langLabel">EN</span>
         </button>
+        <!-- Hamburger (mobile only) -->
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
       </div>
     </div>
   </nav>
+
+  <!-- Mobile drawer menu -->
+  <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+    <a href="#core" class="mobile-nav-link" data-zh="必修" data-en="Core">必修</a>
+    <a href="#m2" class="mobile-nav-link" data-zh="M2" data-en="M2">M2</a>
+    <a href="guide.html" class="mobile-nav-link" data-zh="使用說明" data-en="Guide">使用說明</a>
+    <div class="mobile-lang-row">
+      <span class="mobile-lang-label" data-zh="切換語言" data-en="Switch Language">切換語言</span>
+      <button class="lang-toggle" id="langToggleMobile" aria-label="Toggle language">
+        <span id="langLabelMobile">EN</span>
+      </button>
+    </div>
+  </div>
 
   <!-- ── HERO ── -->
   <header class="hero">
