@@ -79,7 +79,7 @@
         </div>
         <div class="hero-stats">
           <div class="stat-item">
-            <span class="stat-n">6</span>
+            <span class="stat-n">7</span>
             <span class="stat-l" data-zh="互動工具" data-en="Tools">互動工具</span>
           </div>
           <div class="stat-sep"></div>
@@ -166,9 +166,44 @@
           </div>
         </article>
 
+              <!-- Card: 排列與組合及概率 -->
+        <article class="tool-card">
+          <div class="card-top">
+            <div class="card-icon-box core-icon">
+              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                <circle cx="14" cy="14" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+                <circle cx="42" cy="14" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+                <circle cx="28" cy="40" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+                <line x1="20" y1="14" x2="36" y2="14" stroke="currentColor" stroke-width="1.8" opacity="0.6"/>
+                <line x1="17" y1="19" x2="25" y2="35" stroke="currentColor" stroke-width="1.8" opacity="0.6"/>
+                <line x1="39" y1="19" x2="31" y2="35" stroke="currentColor" stroke-width="1.8" opacity="0.6"/>
+              </svg>
+            </div>
+            <div class="card-tags">
+              <span class="tag core-tag" data-zh="排列" data-en="Permutation">排列</span>
+              <span class="tag core-tag" data-zh="組合" data-en="Combination">組合</span>
+              <span class="tag core-tag" data-zh="概率" data-en="Probability">概率</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title" data-zh="排列、組合及概率" data-en="Permutation, Combination &amp; Probability">排列、組合及概率</h3>
+            <p class="card-desc" data-zh="計算排列數、組合數及概率，支援條件概率、互斥事件及獨立事件，逐步顯示解題過程。" data-en="Calculate permutations, combinations and probabilities including conditional probability, mutually exclusive and independent events with step-by-step solutions.">計算排列數、組合數及概率，支援條件概率、互斥事件及獨立事件，逐步顯示解題過程。</p>
+            <div class="card-formula">$$P(A|B) = \frac{P(A \cap B)}{P(B)}$$</div>
+            <ul class="card-features">
+              <li data-zh="排列 P(n,r) · 組合 C(n,r) 計算" data-en="Permutation P(n,r) · Combination C(n,r)">排列 P(n,r) · 組合 C(n,r) 計算</li>
+              <li data-zh="條件概率 · 互斥 · 獨立事件" data-en="Conditional probability · Mutually exclusive · Independent">條件概率 · 互斥 · 獨立事件</li>
+              <li data-zh="逐步解題過程顯示" data-en="Step-by-step solution display">逐步解題過程顯示</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="https://kingtmc314.github.io/dse-pc-prob-calculator/" target="_blank" rel="noopener" class="launch-btn core-btn">
+              <span data-zh="開啟工具" data-en="Launch Tool">開啟工具</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </article>
       </div>
     </section>
-
     <!-- ── M2 SECTION ── -->
     <section class="subject-section" id="m2">
       <div class="section-header">
@@ -355,11 +390,12 @@
             </div>
             <div class="card-tags">
               <span class="tag m2-tag" data-zh="不定積分" data-en="Indefinite Integration">不定積分</span>
+              <span class="tag m2-tag" data-zh="定積分" data-en="Definite Integration">定積分</span>
               <span class="tag m2-tag" data-zh="反微分" data-en="Anti-differentiation">反微分</span>
             </div>
           </div>
           <div class="card-body">
-            <h3 class="card-title" data-zh="不定積分計算器" data-en="Indefinite Integration">不定積分計算器</h3>
+            <h3 class="card-title" data-zh="不定積分與定積分" data-en="Indefinite &amp; Definite Integration">不定積分與定積分</h3>
             <p class="card-desc" data-zh="計算不定積分，逐步顯示反微分過程，支援多種積分技巧，輸出含積分常數 C 的精確答案。" data-en="Compute indefinite integrals with step-by-step anti-differentiation, supporting multiple integration techniques with exact answers including constant C.">計算不定積分，逐步顯示反微分過程，支援多種積分技巧，輸出含積分常數 C 的精確答案。</p>
             <div class="card-formula">$$\int f(x)\,dx = F(x) + C$$</div>
             <ul class="card-features">
