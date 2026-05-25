@@ -108,8 +108,16 @@
       color: white;
       padding: calc(64px + clamp(1.5rem, 4vw, 3rem)) clamp(1rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem);
       margin-top: 0;
-      width: 100%;
+      /* Force full viewport width regardless of parent context */
+      width: 100vw;
+      max-width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
       box-sizing: border-box;
+      display: block;
     }
     .guide-hero-badge {
       display: inline-block;
