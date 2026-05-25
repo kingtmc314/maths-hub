@@ -36,7 +36,7 @@
       grid-template-columns: 260px 1fr;
       gap: 0;
       min-height: calc(100vh - 64px);
-      margin-top: 64px;
+      margin-top: 0;
     }
     .guide-sidebar {
       position: sticky;
@@ -106,8 +106,10 @@
     .guide-hero {
       background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 60%, #0e7490 100%);
       color: white;
-      padding: 3rem 4rem;
-      margin-top: 64px;
+      padding: calc(64px + 3rem) 4rem 3rem;
+      margin-top: 0;
+      width: 100%;
+      box-sizing: border-box;
     }
     .guide-hero-badge {
       display: inline-block;
@@ -389,13 +391,68 @@
       font-size: 0.9rem;
       color: #475569;
     }
+    /* ── RESPONSIVE ── */
+
+    /* Tablet: ≤900px */
     @media (max-width: 900px) {
-      .guide-layout { grid-template-columns: 1fr; }
+      .guide-layout {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+      }
       .guide-sidebar { display: none; }
-      .guide-content { padding: 2rem 1.5rem 4rem; }
-      .guide-hero { padding: 2rem 1.5rem; }
+      .guide-hero {
+        padding: calc(56px + 2rem) 1.5rem 2.5rem;
+        width: 100%;
+        box-sizing: border-box;
+      }
       .guide-hero h1 { font-size: 1.7rem; }
+      .guide-hero p { font-size: 0.95rem; max-width: 100%; }
+      .guide-hero-meta { flex-wrap: wrap; gap: 0.75rem; }
+      .guide-content { padding: 2rem 1.5rem 4rem; max-width: 100%; }
       .toc-grid { grid-template-columns: 1fr; }
+      .tool-header { flex-wrap: wrap; gap: 0.75rem; }
+    }
+
+    /* Large phone: ≤640px */
+    @media (max-width: 640px) {
+      .guide-hero {
+        padding: calc(56px + 1.75rem) 1.1rem 2rem;
+      }
+      .guide-hero h1 { font-size: 1.5rem; }
+      .guide-hero p { font-size: 0.9rem; }
+      .guide-content { padding: 1.75rem 1.1rem 3.5rem; }
+      .guide-content h2 { font-size: 1.25rem; }
+      .guide-content h3 { font-size: 1.05rem; }
+      .guide-content table { font-size: 0.8rem; }
+      .guide-content th, .guide-content td { padding: 0.5rem 0.6rem; }
+      .toc-card { font-size: 0.82rem; padding: 0.75rem 0.85rem; }
+      .math-block { padding: 0.75rem 1rem; }
+      .tool-header { padding: 1rem 1.1rem; }
+      .tool-header-title { font-size: 1.05rem; }
+      .step-list li { gap: 0.75rem; }
+      .faq-q { font-size: 0.85rem; padding: 0.85rem 1rem; }
+      .faq-a.open { padding: 0.85rem 1rem; }
+    }
+
+    /* Small phone: ≤480px */
+    @media (max-width: 480px) {
+      .guide-hero {
+        padding: calc(56px + 1.5rem) 0.9rem 1.75rem;
+      }
+      .guide-hero h1 { font-size: 1.35rem; }
+      .guide-hero-badge { font-size: 0.7rem; padding: 0.25rem 0.75rem; }
+      .guide-content { padding: 1.5rem 0.9rem 3rem; }
+      .guide-content h2 { font-size: 1.15rem; padding-bottom: 0.5rem; }
+      .guide-content h3 { font-size: 1rem; }
+      .toc-grid { gap: 0.5rem; }
+      .toc-card { padding: 0.65rem 0.75rem; font-size: 0.8rem; }
+      .toc-card-num { width: 24px; height: 24px; min-width: 24px; font-size: 0.7rem; }
+      .tool-header { padding: 0.85rem 0.9rem; border-radius: 10px; }
+      .tool-header-icon { width: 40px; height: 40px; font-size: 1.2rem; }
+      .tool-header-title { font-size: 0.97rem; }
+      .step-list li::before { width: 24px; height: 24px; min-width: 24px; font-size: 0.72rem; }
+      .math-block { padding: 0.6rem 0.75rem; }
+      .faq-q { font-size: 0.82rem; }
     }
   </style>
 </head>
