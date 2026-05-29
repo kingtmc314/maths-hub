@@ -392,6 +392,8 @@
     }
     .toc-card-num.core { background: #fef3c7; color: #92400e; }
     .toc-card-num.m2 { background: #d1fae5; color: #065f46; }
+    .toc-card-num.other { background: #f3e8ff; color: #6b21a8; }
+    .tool-header-icon.other { background: linear-gradient(135deg, #f3e8ff, #e9d5ff); }
     .faq-item {
       border: 1px solid #e2e8f0;
       border-radius: 10px;
@@ -594,6 +596,38 @@
           <a href="#practice" class="toc-card">
             <span class="toc-card-num core">8</span>
             <span data-zh="數學必修練習" data-en="Math Core Practice">數學必修練習</span>
+          </a>
+          <a href="#wolfram" class="toc-card">
+            <span class="toc-card-num other">9</span>
+            <span data-zh="Wolfram Alpha" data-en="Wolfram Alpha">Wolfram Alpha</span>
+          </a>
+          <a href="#symbolab" class="toc-card">
+            <span class="toc-card-num other">10</span>
+            <span data-zh="Symbolab" data-en="Symbolab">Symbolab</span>
+          </a>
+          <a href="#desmos" class="toc-card">
+            <span class="toc-card-num other">11</span>
+            <span data-zh="Desmos" data-en="Desmos">Desmos</span>
+          </a>
+          <a href="#geogebra" class="toc-card">
+            <span class="toc-card-num other">12</span>
+            <span data-zh="GeoGebra" data-en="GeoGebra">GeoGebra</span>
+          </a>
+          <a href="#matlab" class="toc-card">
+            <span class="toc-card-num other">13</span>
+            <span data-zh="MATLAB" data-en="MATLAB">MATLAB</span>
+          </a>
+          <a href="#maple" class="toc-card">
+            <span class="toc-card-num other">14</span>
+            <span data-zh="Maple" data-en="Maple">Maple</span>
+          </a>
+          <a href="#mathway" class="toc-card">
+            <span class="toc-card-num other">15</span>
+            <span data-zh="Mathway" data-en="Mathway">Mathway</span>
+          </a>
+          <a href="#gmath" class="toc-card">
+            <span class="toc-card-num other">16</span>
+            <span data-zh="gMath" data-en="gMath">gMath</span>
           </a>
         </div>
 
@@ -910,6 +944,215 @@
         <blockquote>
           <p data-zh="💡 提示：在练习过程中，你可以暂时存档答案。下次进入时会自动后续。" data-en="💡 Tip: You can save your answer temporarily during practice. It will auto-resume on your next visit.">💡 提示：在练习过程中，你可以暂时存档答案。下次进入时会自动后续。</p>
         </blockquote>
+      </section>
+
+
+      <!-- Other Math Tools Section -->
+      <section id="other" class="subject-section">
+        <div class="section-header">
+          <h2 class="section-title" data-zh="其他數學工具" data-en="Other Math Tools">其他數學工具</h2>
+          <p class="section-desc" data-zh="第三方數學軟件及線上工具，涵蓋符號計算、繪圖、數值計算等功能。" data-en="Third-party math software and online tools covering symbolic computation, graphing, numerical analysis, etc.">第三方數學軟件及線上工具，涵蓋符號計算、繪圖、數值計算等功能。</p>
+        </div>
+
+        <!-- Symbolic Computation & Equation Solving -->
+        <div class="sub-category">
+          <h3 class="sub-cat-title" data-zh="符號計算 & 方程求解" data-en="Symbolic Computation & Equation Solving">符號計算 & 方程求解</h3>
+          <div class="tools-grid">
+            <div class="tool-card">
+              <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #FF6B6B, #FF8E72);">🔢</div>
+                <div class="card-meta">
+                  <span class="card-badge" data-zh="線上工具" data-en="Online Tool">線上工具</span>
+                </div>
+              </div>
+              <h3 class="card-title" data-zh="Wolfram Alpha" data-en="Wolfram Alpha">Wolfram Alpha</h3>
+              <p class="card-desc" data-zh="通用計算引擎，支援方程求解、積分、微分、線性代數、統計等。" data-en="Universal computational engine supporting equation solving, integration, differentiation, linear algebra, statistics, etc.">通用計算引擎，支援方程求解、積分、微分、線性代數、統計等。</p>
+              <div class="card-formula">$$f(x) = ax^2 + bx + c \Rightarrow x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$$</div>
+              <div class="card-features">
+                <ul>
+                  <li data-zh="自然語言輸入" data-en="Natural language input">自然語言輸入</li>
+                  <li data-zh="步驟詳解" data-en="Step-by-step solutions">步驟詳解</li>
+                  <li data-zh="多領域計算" data-en="Multi-domain computation">多領域計算</li>
+                </ul>
+              </div>
+              <a href="https://www.wolframalpha.com" target="_blank" rel="noopener" class="card-btn">
+                <span data-zh="進入工具" data-en="Open Tool">進入工具</span> ↗
+              </a>
+            </div>
+
+            <div class="tool-card">
+              <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #4ECDC4, #44A08D);">📐</div>
+                <div class="card-meta">
+                  <span class="card-badge" data-zh="線上工具" data-en="Online Tool">線上工具</span>
+                </div>
+              </div>
+              <h3 class="card-title" data-zh="Symbolab" data-en="Symbolab">Symbolab</h3>
+              <p class="card-desc" data-zh="數學問題求解器，提供逐步解答。支援代數、微積分、矩陣、統計等。" data-en="Math problem solver with step-by-step solutions. Supports algebra, calculus, matrices, statistics, etc.">數學問題求解器，提供逐步解答。支援代數、微積分、矩陣、統計等。</p>
+              <div class="card-formula">$$\int x^n \, dx = \frac{x^{n+1}}{n+1} + C$$</div>
+              <div class="card-features">
+                <ul>
+                  <li data-zh="逐步求解" data-en="Step-by-step solving">逐步求解</li>
+                  <li data-zh="公式庫" data-en="Formula library">公式庫</li>
+                  <li data-zh="圖表繪製" data-en="Graph plotting">圖表繪製</li>
+                </ul>
+              </div>
+              <a href="https://www.symbolab.com" target="_blank" rel="noopener" class="card-btn">
+                <span data-zh="進入工具" data-en="Open Tool">進入工具</span> ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Graphing & Geometry Visualization -->
+        <div class="sub-category">
+          <h3 class="sub-cat-title" data-zh="繪圖 & 幾何可視化" data-en="Graphing & Geometry Visualization">繪圖 & 幾何可視化</h3>
+          <div class="tools-grid">
+            <div class="tool-card">
+              <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #667EEA, #764BA2);">📊</div>
+                <div class="card-meta">
+                  <span class="card-badge" data-zh="線上工具" data-en="Online Tool">線上工具</span>
+                </div>
+              </div>
+              <h3 class="card-title" data-zh="Desmos" data-en="Desmos">Desmos</h3>
+              <p class="card-desc" data-zh="免費線上圖形計算器，支援函數、參數方程、極坐標、不等式等。" data-en="Free online graphing calculator supporting functions, parametric equations, polar coordinates, inequalities, etc.">免費線上圖形計算器，支援函數、參數方程、極坐標、不等式等。</p>
+              <div class="card-formula">$$y = a\sin(bx + c) + d$$</div>
+              <div class="card-features">
+                <ul>
+                  <li data-zh="互動繪圖" data-en="Interactive graphing">互動繪圖</li>
+                  <li data-zh="實時動畫" data-en="Real-time animation">實時動畫</li>
+                  <li data-zh="協作功能" data-en="Collaboration features">協作功能</li>
+                </ul>
+              </div>
+              <a href="https://www.desmos.com/calculator" target="_blank" rel="noopener" class="card-btn">
+                <span data-zh="進入工具" data-en="Open Tool">進入工具</span> ↗
+              </a>
+            </div>
+
+            <div class="tool-card">
+              <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #F093FB, #F5576C);">🔷</div>
+                <div class="card-meta">
+                  <span class="card-badge" data-zh="線上 & 軟件" data-en="Online & Software">線上 & 軟件</span>
+                </div>
+              </div>
+              <h3 class="card-title" data-zh="GeoGebra" data-en="GeoGebra">GeoGebra</h3>
+              <p class="card-desc" data-zh="互動幾何、代數及微積分軟件。支援 2D/3D 繪圖、動態幾何構造。" data-en="Interactive geometry, algebra and calculus software. Supports 2D/3D graphing and dynamic geometric constructions.">互動幾何、代數及微積分軟件。支援 2D/3D 繪圖、動態幾何構造。</p>
+              <div class="card-formula">$$\vec{AB} \cdot \vec{CD} = |\vec{AB}||\vec{CD}|\cos\theta$$</div>
+              <div class="card-features">
+                <ul>
+                  <li data-zh="3D 幾何" data-en="3D geometry">3D 幾何</li>
+                  <li data-zh="動態構造" data-en="Dynamic construction">動態構造</li>
+                  <li data-zh="多平台" data-en="Multi-platform">多平台</li>
+                </ul>
+              </div>
+              <a href="https://www.geogebra.org" target="_blank" rel="noopener" class="card-btn">
+                <span data-zh="進入工具" data-en="Open Tool">進入工具</span> ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Numerical Computation & Programming -->
+        <div class="sub-category">
+          <h3 class="sub-cat-title" data-zh="數值計算 & 編程" data-en="Numerical Computation & Programming">數值計算 & 編程</h3>
+          <div class="tools-grid">
+            <div class="tool-card">
+              <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #FA8231, #FF6348);">🔧</div>
+                <div class="card-meta">
+                  <span class="card-badge" data-zh="軟件" data-en="Software">軟件</span>
+                </div>
+              </div>
+              <h3 class="card-title" data-zh="MATLAB" data-en="MATLAB">MATLAB</h3>
+              <p class="card-desc" data-zh="數值計算、數據分析及可視化軟件。廣泛用於工程、科學研究。" data-en="Numerical computing, data analysis and visualization software. Widely used in engineering and scientific research.">數值計算、數據分析及可視化軟件。廣泛用於工程、科學研究。</p>
+              <div class="card-formula">$$A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}, \quad \det(A) = ad - bc$$</div>
+              <div class="card-features">
+                <ul>
+                  <li data-zh="矩陣運算" data-en="Matrix operations">矩陣運算</li>
+                  <li data-zh="數據可視化" data-en="Data visualization">數據可視化</li>
+                  <li data-zh="編程環境" data-en="Programming environment">編程環境</li>
+                </ul>
+              </div>
+              <a href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener" class="card-btn">
+                <span data-zh="下載/購買" data-en="Download/Buy">下載/購買</span> ↗
+              </a>
+            </div>
+
+            <div class="tool-card">
+              <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #A8EDEA, #FED6E3);">🌳</div>
+                <div class="card-meta">
+                  <span class="card-badge" data-zh="軟件" data-en="Software">軟件</span>
+                </div>
+              </div>
+              <h3 class="card-title" data-zh="Maple" data-en="Maple">Maple</h3>
+              <p class="card-desc" data-zh="符號計算系統，支援代數、微積分、線性代數、微分方程等。" data-en="Symbolic computation system supporting algebra, calculus, linear algebra, differential equations, etc.">符號計算系統，支援代數、微積分、線性代數、微分方程等。</p>
+              <div class="card-formula">$$\frac{d}{dx}\left[\int_a^x f(t) \, dt\right] = f(x)$$</div>
+              <div class="card-features">
+                <ul>
+                  <li data-zh="符號計算" data-en="Symbolic computation">符號計算</li>
+                  <li data-zh="程式設計" data-en="Programming">程式設計</li>
+                  <li data-zh="文檔製作" data-en="Documentation">文檔製作</li>
+                </ul>
+              </div>
+              <a href="https://www.maplesoft.com/products/maple/" target="_blank" rel="noopener" class="card-btn">
+                <span data-zh="下載/購買" data-en="Download/Buy">下載/購買</span> ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI-Assisted Solving -->
+        <div class="sub-category">
+          <h3 class="sub-cat-title" data-zh="AI 輔助求解" data-en="AI-Assisted Solving">AI 輔助求解</h3>
+          <div class="tools-grid">
+            <div class="tool-card">
+              <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #667EEA, #764BA2);">🤖</div>
+                <div class="card-meta">
+                  <span class="card-badge" data-zh="線上工具" data-en="Online Tool">線上工具</span>
+                </div>
+              </div>
+              <h3 class="card-title" data-zh="Mathway" data-en="Mathway">Mathway</h3>
+              <p class="card-desc" data-zh="AI 數學助手，支援代數、幾何、三角、微積分、統計等。提供詳細解答。" data-en="AI math assistant supporting algebra, geometry, trigonometry, calculus, statistics, etc. Provides detailed solutions.">AI 數學助手，支援代數、幾何、三角、微積分、統計等。提供詳細解答。</p>
+              <div class="card-formula">$$P(A|B) = \frac{P(A \cap B)}{P(B)}$$</div>
+              <div class="card-features">
+                <ul>
+                  <li data-zh="AI 求解" data-en="AI solving">AI 求解</li>
+                  <li data-zh="詳細解答" data-en="Detailed solutions">詳細解答</li>
+                  <li data-zh="多科目" data-en="Multiple subjects">多科目</li>
+                </ul>
+              </div>
+              <a href="https://www.mathway.com" target="_blank" rel="noopener" class="card-btn">
+                <span data-zh="進入工具" data-en="Open Tool">進入工具</span> ↗
+              </a>
+            </div>
+
+            <div class="tool-card">
+              <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #FFA502, #FFB84D);">✍️</div>
+                <div class="card-meta">
+                  <span class="card-badge" data-zh="線上工具" data-en="Online Tool">線上工具</span>
+                </div>
+              </div>
+              <h3 class="card-title" data-zh="gMath" data-en="gMath">gMath</h3>
+              <p class="card-desc" data-zh="手寫數學識別工具，支援手寫輸入、符號識別、計算求解。" data-en="Handwritten math recognition tool supporting handwriting input, symbol recognition, and calculation solving.">手寫數學識別工具，支援手寫輸入、符號識別、計算求解。</p>
+              <div class="card-formula">$$\lim_{x \to 0} \frac{\sin x}{x} = 1$$</div>
+              <div class="card-features">
+                <ul>
+                  <li data-zh="手寫識別" data-en="Handwriting recognition">手寫識別</li>
+                  <li data-zh="符號解析" data-en="Symbol parsing">符號解析</li>
+                  <li data-zh="即時計算" data-en="Real-time calculation">即時計算</li>
+                </ul>
+              </div>
+              <a href="https://www.gmath.guru" target="_blank" rel="noopener" class="card-btn">
+                <span data-zh="進入工具" data-en="Open Tool">進入工具</span> ↗
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="faq">
