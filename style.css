@@ -42,6 +42,11 @@
   --m2-bg:       var(--teal-light);
   --m2-border:   var(--teal-mid);
 
+  --other-color:  #8b5cf6;
+  --other-dark:   #7c3aed;
+  --other-bg:     #f5f3ff;
+  --other-border: #ddd6fe;
+
   --font-serif:  'Source Serif 4', 'Noto Serif TC', Georgia, serif;
   --font-sans:   'Inter', 'Noto Serif TC', system-ui, sans-serif;
   --font-mono:   'JetBrains Mono', 'Courier New', monospace;
@@ -393,6 +398,11 @@ body {
   color: var(--teal);
   border: 1px solid var(--m2-border);
 }
+.other-pill {
+  background: var(--other-bg);
+  color: var(--other-color);
+  border: 1px solid var(--other-border);
+}
 
 .section-title {
   font-family: var(--font-serif);
@@ -448,8 +458,9 @@ body {
   justify-content: center;
   flex-shrink: 0;
 }
-.core-icon { background: var(--core-bg); color: var(--amber); }
-.m2-icon   { background: var(--m2-bg);   color: var(--teal);  }
+.core-icon  { background: var(--core-bg);  color: var(--amber);        }
+.m2-icon    { background: var(--m2-bg);    color: var(--teal);         }
+.other-icon { background: var(--other-bg); color: var(--other-color);  }
 
 .card-tags {
   display: flex;
@@ -465,8 +476,9 @@ body {
   border-radius: 100px;
   letter-spacing: 0.03em;
 }
-.core-tag { background: var(--core-bg); color: var(--amber); border: 1px solid var(--core-border); }
-.m2-tag   { background: var(--m2-bg);   color: var(--teal);  border: 1px solid var(--m2-border);  }
+.core-tag  { background: var(--core-bg);  color: var(--amber);       border: 1px solid var(--core-border);  }
+.m2-tag    { background: var(--m2-bg);    color: var(--teal);        border: 1px solid var(--m2-border);    }
+.other-tag { background: var(--other-bg); color: var(--other-color); border: 1px solid var(--other-border); }
 
 .card-body {
   padding: 16px 22px;
@@ -560,6 +572,16 @@ body {
   background: var(--teal-dark);
   transform: translateY(-1px);
   box-shadow: 0 5px 16px rgba(13,148,136,0.4);
+}
+.other-btn {
+  background: var(--other-color);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(139,92,246,0.3);
+}
+.other-btn:hover {
+  background: var(--other-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 16px rgba(139,92,246,0.4);
 }
 
 /* ── FOOTER ── */
