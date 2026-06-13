@@ -403,6 +403,11 @@ body {
   color: var(--other-color);
   border: 1px solid var(--other-border);
 }
+.resources-pill {
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #cffafe;
+}
 
 .section-title {
   font-family: var(--font-serif);
