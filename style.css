@@ -484,7 +484,7 @@ body {
 .core-tag  { background: var(--core-bg);  color: var(--amber);       border: 1px solid var(--core-border);  }
 .m2-tag    { background: var(--m2-bg);    color: var(--teal);        border: 1px solid var(--m2-border);    }
 .other-tag { background: var(--other-bg); color: var(--other-color); border: 1px solid var(--other-border); }
-.resources-tag { background: #e0f2fe; color: #0369a1; border: 1px solid #cffafe; }
+.resources-tag { font-size: 11px !important; padding: 3px 9px !important; background: #e0f2fe; color: #0369a1; border: 1px solid #cffafe; }
 
 .card-body {
   padding: 16px 22px;
