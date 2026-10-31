@@ -19,7 +19,8 @@
 8. [微分與曲線描繪](#8-微分與曲線描繪--differentiation-and-curve-sketching)
 9. [積分：面積與體積](#9-積分面積與體積--integration-area-and-volume)
 10. [不定積分與定積分](#10-不定積分與定積分--indefinite--definite-integration)
-11. [常見問題 FAQ](#11-常見問題-faq)
+11. [圖像變換（M0）](#11-圖像變換m0--graph-transformations-m0)
+12. [常見問題 FAQ](#12-常見問題-faq)
 
 ---
 
@@ -35,6 +36,7 @@
 | 數學（必修） | 線性規劃（M0） | [連結](https://dselinearprog.kingaihome.org) |
 | 數學（必修） | 三角計算器（2D & 3D） | [連結](https://dse2d3dtrigo.kingaihome.org) |
 | 數學（必修） | 排列、組合及概率 | [連結](https://kingtmc314.github.io/dse-pc-prob-calculator/) |
+| 數學（必修） | 圖像變換（M0） | [連結](https://dsegraphtransformation.kingaihome.org) |
 | 數學 (M2) — 代數 | 線性代數實驗室 | [連結](https://dsem2linearalgebra.kingaihome.org) |
 | 數學 (M2) — 代數 | 級數與歸納法計算器 | [連結](https://miseriescalc.kingaihome.org) |
 | 數學 (M2) — 微積分 | DSE M2 微積分遊戲 | [連結](https://calcquest.kingaihome.org) |
@@ -438,7 +440,22 @@ Use progressive challenges to review differentiation, integration and curve anal
 
 ---
 
-## 11. 常見問題 FAQ
+### 11. 圖像變換（M0） / Graph Transformations (M0)
+
+**連結 / Link：** https://dsegraphtransformation.kingaihome.org
+
+透過互動圖像探索函數的平移、反射、伸縮及組合變換，協助理解 $y=af(b(x-h))+k$ 中各參數對圖像的影響。
+
+Use interactive graphs to explore translations, reflections, stretches and combined transformations, showing how each parameter in $y=af(b(x-h))+k$ changes the graph.
+
+**主要功能 / Key features：**
+
+- 平移 / Translation：觀察 $h$ 及 $k$ 控制水平及垂直位移 / See how $h$ and $k$ control horizontal and vertical shifts.
+- 反射 / Reflection：比較關於 $x$ 軸、$y$ 軸及原點的反射 / Compare reflections in the $x$-axis, $y$-axis and origin.
+- 伸縮 / Stretch：理解 $a$ 及 $b$ 對垂直及水平伸縮的影響 / Understand vertical and horizontal stretches controlled by $a$ and $b$.
+- 組合變換 / Combined transformations：逐步組合多種變換並比較圖像 / Combine transformations step by step and compare graphs.
+
+## 12. 常見問題 FAQ
 
 **Q1：工具顯示的答案是近似值還是精確值？**
 所有工具均以精確值輸出（分數、根號、π、e），不使用近似小數，確保答案符合 HKDSE 考試要求。
