@@ -506,8 +506,10 @@
         </div>
       </a>
       <div class="nav-right">
+        <a href="index.html#resources" class="nav-link" data-zh="學習資源" data-en="Resources">學習資源</a>
         <a href="index.html#core" class="nav-link" data-zh="必修" data-en="Core">必修</a>
         <a href="index.html#m2" class="nav-link" data-zh="M2" data-en="M2">M2</a>
+        <a href="index.html#other" class="nav-link" data-zh="其他工具" data-en="Other Tools">其他工具</a>
         <a href="guide.html" class="nav-link active" data-zh="使用說明" data-en="Guide">使用說明</a>
         <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
           <span id="langLabel">EN</span>
@@ -524,9 +526,9 @@
     </a>
     <div class="guide-hero-badge" data-zh="工具使用說明文檔" data-en="Tool User Guide Documentation">工具使用說明文檔</div>
     <h1 data-zh="使用說明" data-en="User Guide">使用說明</h1>
-    <p data-zh="涵蓋所有 7 個數學互動工具的詳細操作指南，包括輸入格式、功能說明及使用技巧。" data-en="Detailed operation guide for all 7 interactive mathematics tools, including input formats, feature descriptions and usage tips.">涵蓋所有 7 個數學互動工具的詳細操作指南，包括輸入格式、功能說明及使用技巧。</p>
+    <p data-zh="涵蓋核心、M2 及 DSE 學習資源的完整操作指南，包括輸入格式、功能說明及使用技巧。" data-en="A complete guide to the Core, M2 and DSE learning resources, including input formats, feature descriptions and practical tips.">涵蓋核心、M2 及 DSE 學習資源的完整操作指南，包括輸入格式、功能說明及使用技巧。</p>
     <div class="guide-meta">
-      <span>📚 <span data-zh="7 個工具" data-en="7 Tools">7 個工具</span></span>
+      <span>📚 <span data-zh="核心與 M2 工具" data-en="Core &amp; M2 Tools">核心與 M2 工具</span></span>
       <span>🎓 HKDSE 數學必修 &amp; M2</span>
       <span>🌐 <span data-zh="中英雙語" data-en="Bilingual ZH/EN">中英雙語</span></span>
     </div>
@@ -545,10 +547,12 @@
         <li class="sidebar-section-label" data-zh="數學（必修）" data-en="Core Mathematics">數學（必修）</li>
         <li><a href="#trig" data-zh="三角計算器（2D &amp; 3D）" data-en="Trigonometry Calculator">三角計算器（2D &amp; 3D）</a></li>
         <li><a href="#pc" data-zh="排列、組合及概率" data-en="P&amp;C &amp; Probability">排列、組合及概率</a></li>
+        <li><a href="#linearprog" data-zh="線性規劃（M0）" data-en="Linear Programming (M0)">線性規劃（M0）</a></li>
         <li class="sidebar-section-label" data-zh="數學 (M2) — 代數" data-en="M2 — Algebra">M2 — 代數</li>
         <li><a href="#linalg" data-zh="線性代數實驗室" data-en="Linear Algebra Lab">線性代數實驗室</a></li>
         <li><a href="#series" data-zh="級數與歸納法計算器" data-en="Series &amp; Induction">級數與歸納法計算器</a></li>
         <li class="sidebar-section-label" data-zh="數學 (M2) — 微積分" data-en="M2 — Calculus">M2 — 微積分</li>
+        <li><a href="#calcquest" data-zh="DSE M2 微積分遊戲" data-en="DSE M2 Calculus Game">DSE M2 微積分遊戲</a></li>
         <li><a href="#diff" data-zh="微分與曲線描繪" data-en="Differentiation &amp; Curve">微分與曲線描繪</a></li>
         <li><a href="#intav" data-zh="積分：面積與體積" data-en="Integration: Area &amp; Volume">積分：面積與體積</a></li>
         <li><a href="#indef" data-zh="不定積分與定積分" data-en="Indefinite &amp; Definite Int.">不定積分與定積分</a></li>
@@ -561,8 +565,6 @@
         <li><a href="#maple" class="nav-sub" data-zh="Maple" data-en="Maple">Maple</a></li>
         <li><a href="#mathway" class="nav-sub" data-zh="Mathway" data-en="Mathway">Mathway</a></li>
         <li><a href="#gmath" class="nav-sub" data-zh="gMath" data-en="gMath">gMath</a></li>
-        <li class="sidebar-section-label" data-zh="學習資源" data-en="Learning Resources">學習資源</li>
-        <li><a href="#resources" data-zh="相關資源" data-en="Related Resources">相關資源</a></li>
         <li><a href="#faq" data-zh="常見問題" data-en="FAQ">常見問題 FAQ</a></li>
       </ul>
     </aside>
@@ -576,68 +578,76 @@
         <p data-zh="數學學習資源中心是一個整合 HKDSE 數學必修及 M2 互動工具的學習入口網站。所有工具均以精確值（分數、根號、π）輸出答案，並以 LaTeX 格式顯示完整解題步驟，支援中英文介面切換。" data-en="The Maths Learning Hub is a curated portal integrating interactive tools for HKDSE Core Mathematics and Module 2 (M2). All tools output exact-value answers (fractions, surds, π) with full LaTeX step-by-step working, and support bilingual (Chinese/English) interface switching.">數學學習資源中心是一個整合 HKDSE 數學必修及 M2 互動工具的學習入口網站。所有工具均以精確值（分數、根號、π）輸出答案，並以 LaTeX 格式顯示完整解題步驟，支援中英文介面切換。</p>
 
         <div class="toc-grid">
+          <a href="#resources" class="toc-card">
+            <span class="toc-card-num other">1</span>
+            <span data-zh="DSE 數學詳細分析" data-en="DSE Math Past Papers Analysis">DSE 數學詳細分析</span>
+          </a>
           <a href="#trig" class="toc-card">
-            <span class="toc-card-num core">1</span>
+            <span class="toc-card-num core">2</span>
             <span data-zh="三角計算器（2D &amp; 3D）" data-en="Trigonometry Calculator (2D &amp; 3D)">三角計算器（2D &amp; 3D）</span>
           </a>
           <a href="#pc" class="toc-card">
-            <span class="toc-card-num core">2</span>
+            <span class="toc-card-num core">3</span>
             <span data-zh="排列、組合及概率" data-en="Permutation, Combination &amp; Probability">排列、組合及概率</span>
           </a>
+          <a href="#linearprog" class="toc-card">
+            <span class="toc-card-num core">4</span>
+            <span data-zh="線性規劃（M0）" data-en="Linear Programming (M0)">線性規劃（M0）</span>
+          </a>
           <a href="#linalg" class="toc-card">
-            <span class="toc-card-num m2">3</span>
+            <span class="toc-card-num m2">5</span>
             <span data-zh="線性代數實驗室" data-en="Linear Algebra Lab">線性代數實驗室</span>
           </a>
           <a href="#series" class="toc-card">
-            <span class="toc-card-num m2">4</span>
+            <span class="toc-card-num m2">6</span>
             <span data-zh="級數與歸納法計算器" data-en="Series and Induction Calculator">級數與歸納法計算器</span>
           </a>
+          <a href="#calcquest" class="toc-card">
+            <span class="toc-card-num m2">7</span>
+            <span data-zh="DSE M2 微積分遊戲" data-en="DSE M2 Calculus Game">DSE M2 微積分遊戲</span>
+          </a>
           <a href="#diff" class="toc-card">
-            <span class="toc-card-num m2">5</span>
+            <span class="toc-card-num m2">8</span>
             <span data-zh="微分與曲線描繪" data-en="Differentiation and Curve Sketching">微分與曲線描繪</span>
           </a>
           <a href="#intav" class="toc-card">
-            <span class="toc-card-num m2">6</span>
+            <span class="toc-card-num m2">9</span>
             <span data-zh="積分：面積與體積" data-en="Integration: Area and Volume">積分：面積與體積</span>
           </a>
           <a href="#indef" class="toc-card">
-            <span class="toc-card-num m2">7</span>
+            <span class="toc-card-num m2">10</span>
             <span data-zh="不定積分與定積分" data-en="Indefinite &amp; Definite Integration">不定積分與定積分</span>
           </a>
-          <a href="#practice" class="toc-card">
-            <span class="toc-card-num core">8</span>
-            <span data-zh="數學必修練習" data-en="Math Core Practice">數學必修練習</span>
-          </a>
           <a href="#wolfram" class="toc-card">
-            <span class="toc-card-num other">9</span>
+            <span class="toc-card-num other">11</span>
             <span data-zh="Wolfram Alpha" data-en="Wolfram Alpha">Wolfram Alpha</span>
           </a>
           <a href="#symbolab" class="toc-card">
-            <span class="toc-card-num other">10</span>
+            <span class="toc-card-num other">12</span>
             <span data-zh="Symbolab" data-en="Symbolab">Symbolab</span>
           </a>
           <a href="#desmos" class="toc-card">
-            <span class="toc-card-num other">11</span>
+            <span class="toc-card-num other">13</span>
             <span data-zh="Desmos" data-en="Desmos">Desmos</span>
           </a>
           <a href="#geogebra" class="toc-card">
-            <span class="toc-card-num other">12</span>
+            <span class="toc-card-num other">14</span>
             <span data-zh="GeoGebra" data-en="GeoGebra">GeoGebra</span>
           </a>
           <a href="#matlab" class="toc-card">
-            <span class="toc-card-num other">13</span>
+            <span class="toc-card-num other">15</span>
             <span data-zh="MATLAB" data-en="MATLAB">MATLAB</span>
           </a>
           <a href="#maple" class="toc-card">
-            <span class="toc-card-num other">14</span>
+            <span class="toc-card-num other">16</span>
             <span data-zh="Maple" data-en="Maple">Maple</span>
           </a>
           <a href="#mathway" class="toc-card">
-            <span class="toc-card-num other">15</span>
+            <span class="toc-card-num other">17</span>
             <span data-zh="Mathway" data-en="Mathway">Mathway</span>
           </a>
           <a href="#gmath" class="toc-card">
-            <span class="toc-card-num other">16</span>
+            <span class="toc-card-num other">18</span>
             <span data-zh="gMath" data-en="gMath">gMath</span>
           </a>
         </div>
@@ -656,7 +666,7 @@
           <div class="tool-header-icon core">📐</div>
           <div class="tool-header-info">
             <div class="tool-header-title" data-zh="三角計算器（2D &amp; 3D）" data-en="Trigonometry Calculator (2D &amp; 3D)">三角計算器（2D &amp; 3D）</div>
-            <a href="https://kingtmc314.github.io/solid-geometry-calculator/" target="_blank" rel="noopener" class="tool-header-link">kingtmc314.github.io/solid-geometry-calculator/ ↗</a>
+            <a href="https://dse2d3dtrigo.kingaihome.org" target="_blank" rel="noopener" class="tool-header-link">dse2d3dtrigo.kingaihome.org ↗</a>
           </div>
           <span class="tool-badge badge-core" data-zh="必修" data-en="Core">必修</span>
         </div>
@@ -715,6 +725,28 @@
         <div class="math-block">$$P(n,r) = \frac{n!}{(n-r)!} \qquad C(n,r) = \frac{n!}{r!(n-r)!} \qquad P(A|B) = \frac{P(A \cap B)}{P(B)}$$</div>
       </section>
 
+
+      <!-- Tool: Linear Programming (M0) -->
+      <section id="linearprog">
+        <h2 data-zh="線性規劃（M0）" data-en="Linear Programming (M0)">線性規劃（M0）</h2>
+        <div class="tool-header">
+          <div class="tool-header-icon core">📊</div>
+          <div class="tool-header-info">
+            <div class="tool-header-title" data-zh="線性規劃" data-en="Linear Programming">線性規劃</div>
+            <a href="https://dselinearprog.kingaihome.org" target="_blank" rel="noopener" class="tool-header-link">dselinearprog.kingaihome.org ↗</a>
+          </div>
+          <span class="tool-badge badge-core">M0</span>
+        </div>
+        <p data-zh="線性規劃工具以圖像方式展示限制條件、可行域及目標函數，協助你掌握 M0 線性規劃題的建模及最優解判斷。" data-en="This linear programming tool visualises constraints, feasible regions and objective functions to help you model M0 problems and identify optimal solutions.">線性規劃工具以圖像方式展示限制條件、可行域及目標函數，協助你掌握 M0 線性規劃題的建模及最優解判斷。</p>
+        <h3 data-zh="使用步驟" data-en="How to Use">使用步驟</h3>
+        <ol class="step-list">
+          <li><span data-zh="輸入目標函數及各項限制條件，確認變數及不等式方向正確。" data-en="Enter the objective function and constraints, checking the variables and inequality directions.">輸入目標函數及各項限制條件，確認變數及不等式方向正確。</span></li>
+          <li><span data-zh="查看圖像中的可行域，並檢查各個頂點座標。" data-en="Inspect the feasible region and check the coordinates of its vertices on the graph.">查看圖像中的可行域，並檢查各個頂點座標。</span></li>
+          <li><span data-zh="比較頂點的目標函數值，判斷最大值或最小值。" data-en="Compare the objective-function values at the vertices to determine the maximum or minimum.">比較頂點的目標函數值，判斷最大值或最小值。</span></li>
+        </ol>
+        <div class="math-block">$$Z=ax+by \qquad \text{subject to the given constraints}$$</div>
+      </section>
+
       <!-- Tool 3: Linear Algebra -->
       <section id="linalg">
         <h2 data-zh="線性代數實驗室" data-en="Linear Algebra Lab">線性代數實驗室</h2>
@@ -722,7 +754,7 @@
           <div class="tool-header-icon m2">🔢</div>
           <div class="tool-header-info">
             <div class="tool-header-title" data-zh="線性代數實驗室" data-en="Linear Algebra Lab">線性代數實驗室</div>
-            <a href="https://kingtmc314.github.io/linear-algebra-lab/" target="_blank" rel="noopener" class="tool-header-link">kingtmc314.github.io/linear-algebra-lab/ ↗</a>
+            <a href="https://dsem2linearalgebra.kingaihome.org" target="_blank" rel="noopener" class="tool-header-link">dsem2linearalgebra.kingaihome.org ↗</a>
           </div>
           <span class="tool-badge badge-m2">M2</span>
         </div>
@@ -757,7 +789,7 @@
           <div class="tool-header-icon m2">Σ</div>
           <div class="tool-header-info">
             <div class="tool-header-title" data-zh="級數與歸納法計算器" data-en="Series and Induction Calculator">級數與歸納法計算器</div>
-            <a href="https://seriescalc-mdhgko93.manus.space" target="_blank" rel="noopener" class="tool-header-link">seriescalc-mdhgko93.manus.space ↗</a>
+            <a href="https://miseriescalc.kingaihome.org" target="_blank" rel="noopener" class="tool-header-link">miseriescalc.kingaihome.org ↗</a>
           </div>
           <span class="tool-badge badge-m2">M2</span>
         </div>
@@ -781,6 +813,27 @@
 
         <h3 data-zh="第三部分：數值計算驗證" data-en="Part 3: Numerical Verification">第三部分：數值計算驗證</h3>
         <p data-zh="輸入具體數值上下限，驗算封閉式結果。若上下限與第一部分不同，自動應用分拆求和恆等式 S(a,b) = F(b) − F(a−1)。" data-en="Enter specific numerical limits to verify the closed-form result. If limits differ from Part 1, the split-sum identity S(a,b) = F(b) − F(a−1) is applied automatically.">輸入具體數值上下限，驗算封閉式結果。若上下限與第一部分不同，自動應用分拆求和恆等式 S(a,b) = F(b) − F(a−1)。</p>
+      </section>
+
+
+      <!-- Tool: DSE M2 Calculus Game -->
+      <section id="calcquest">
+        <h2 data-zh="DSE M2 微積分遊戲" data-en="DSE M2 Calculus Game">DSE M2 微積分遊戲</h2>
+        <div class="tool-header">
+          <div class="tool-header-icon m2">🎮</div>
+          <div class="tool-header-info">
+            <div class="tool-header-title" data-zh="DSE M2 微積分遊戲" data-en="DSE M2 Calculus Game">DSE M2 微積分遊戲</div>
+            <a href="https://calcquest.kingaihome.org" target="_blank" rel="noopener" class="tool-header-link">calcquest.kingaihome.org ↗</a>
+          </div>
+          <span class="tool-badge badge-m2">M2</span>
+        </div>
+        <p data-zh="透過分階段遊戲挑戰複習微分、積分及曲線分析；每完成一項任務即可取得即時回饋，適合課後自我測試。" data-en="Review differentiation, integration and curve analysis through progressive game challenges with instant feedback after each task, ideal for self-testing.">透過分階段遊戲挑戰複習微分、積分及曲線分析；每完成一項任務即可取得即時回饋，適合課後自我測試。</p>
+        <h3 data-zh="建議用法" data-en="Suggested Use">建議用法</h3>
+        <ol class="step-list">
+          <li><span data-zh="先完成一個主題挑戰，記下答錯的概念。" data-en="Complete a topic challenge first and note the concepts you missed.">先完成一個主題挑戰，記下答錯的概念。</span></li>
+          <li><span data-zh="回到相應的 M2 工具查看完整推導及圖像。" data-en="Return to the relevant M2 tool for full derivations and visualisations.">回到相應的 M2 工具查看完整推導及圖像。</span></li>
+          <li><span data-zh="再次挑戰以確認已掌握相關技巧。" data-en="Replay the challenge to confirm that you have mastered the technique.">再次挑戰以確認已掌握相關技巧。</span></li>
+        </ol>
       </section>
 
       <!-- Tool 5: Differentiation -->
@@ -916,46 +969,6 @@
       </section>
 
       <!-- FAQ -->
-      <!-- Tool 8: Math Core Practice -->
-      <section id="practice">
-        <h2 data-zh="数学必修练习" data-en="Math Core Practice">数学必修练习</h2>
-        <div class="tool-header">
-          <div class="tool-header-icon core">📝</div>
-          <div class="tool-header-info">
-            <div class="tool-header-title" data-zh="数学必修练习" data-en="Math Core Practice">数学必修练习</div>
-            <a href="https://mathquizbank-emmvc5lw.manus.space" target="_blank" rel="noopener" class="tool-header-link">mathquizbank-emmvc5lw.manus.space ↗</a>
-          </div>
-          <span class="tool-badge badge-core" data-zh="必修" data-en="Core">必修</span>
-        </div>
-
-        <p data-zh="涵盖HKDSE数学必修课程的自动生成练习题，支援多种题型、即时自动评分及成绩追踪。" data-en="Auto-generated practice questions covering HKDSE core mathematics curriculum with multiple question types, instant auto-grading and progress tracking.">涵盖HKDSE数学必修课程的自动生成练习题，支援多种题型、即时自动评分及成绩追踪。</p>
-
-        <h3 data-zh="主要功能" data-en="Key Features">主要功能</h3>
-        <table>
-          <thead><tr><th data-zh="功能" data-en="Feature">功能</th><th data-zh="说明" data-en="Description">说明</th></tr></thead>
-          <tbody>
-            <tr><td data-zh="自动生成练习题" data-en="Auto-generated Questions">自动生成练习题</td><td data-zh="每次加载都会生成不同的题目，无限题库" data-en="Each session generates different questions, unlimited question bank">每次加载都会生成不同的题目，无限题库</td></tr>
-            <tr><td data-zh="即时自动评分" data-en="Instant Auto-grading">即时自动评分</td><td data-zh="提交答案后立即获得评分及详细解答" data-en="Get instant score and detailed solutions after submission">提交答案后立即获得评分及详细解答</td></tr>
-            <tr><td data-zh="成绩追踪" data-en="Score Tracking">成绩追踪</td><td data-zh="自动记录所有次数的成绩，便分析学习进度" data-en="Automatically records all scores for progress analysis">自动记录所有次数的成绩，便分析学习进度</td></tr>
-            <tr><td data-zh="多种题型" data-en="Multiple Question Types">多种题型</td><td data-zh="包含选择题、填空题、计算题等" data-en="Includes multiple choice, fill-in-the-blank, calculation problems, etc.">包含选择题、填空题、计算题等</td></tr>
-          </tbody>
-        </table>
-
-        <h3 data-zh="使用流程" data-en="How to Use">使用流程</h3>
-        <ol class="step-list">
-          <li><span data-zh="进入网站后，选择要练习的课题领域（例如三角、代数、统计等）。" data-en="After entering the website, select the topic area you want to practice (e.g. trigonometry, algebra, statistics).">进入网站后，选择要练习的课题领域（例如三角、代数、统计等）。</span></li>
-          <li><span data-zh="网站会自动生成一道练习题。仔细阅读题目，根据需要填写答案。" data-en="The website automatically generates a practice question. Read it carefully and fill in your answer as needed.">网站会自动生成一道练习题。仔细阅读题目，根据需要填写答案。</span></li>
-          <li><span data-zh="提交答案后，网站会立即评分并显示详细的解答。" data-en="After submitting your answer, the website will immediately grade it and show a detailed solution.">提交答案后，网站会立即评分并显示详细的解答。</span></li>
-          <li><span data-zh="你的成绩会自动保存。点击「成绩追踪」可查看历史成绩。" data-en="Your score is automatically saved. Click 'Score History' to view your past results.">你的成绩会自动保存。点击「成绩追踪」可查看历史成绩。</span></li>
-          <li><span data-zh="需要更多练习题时，点击「下一题」或「New Question」按钮。" data-en="To practice more questions, click 'Next Question' or 'New Question' button.">需要更多练习题时，点击「下一题」或「New Question」按钮。</span></li>
-        </ol>
-
-        <div class="math-block">$$\text{Score} = \frac{\text{Correct}}{\text{Total}} \times 100\%$$</div>
-
-        <blockquote>
-          <p data-zh="💡 提示：在练习过程中，你可以暂时存档答案。下次进入时会自动后续。" data-en="💡 Tip: You can save your answer temporarily during practice. It will auto-resume on your next visit.">💡 提示：在练习过程中，你可以暂时存档答案。下次进入时会自动后续。</p>
-        </blockquote>
-      </section>
 
 
       <!-- Other Math Tools Section -->
@@ -1314,14 +1327,14 @@
         <p data-zh="互助學習的其他資源平台，輔助你的 HKDSE 數學準備。" data-en="Complementary learning resources to support your HKDSE Mathematics preparation.">互助學習的其他資源平台，輔助你的 HKDSE 數學準備。</p>
 
         <h3 data-zh="DSE 數學詳細分析" data-en="DSE Math Past Papers Analysis">DSE 數學詳細分析</h3>
-        <p data-zh="涉及 2012–2025 年必修卷一、卷二及 M2 所有這項的答題率、答案及課項分析。" data-en="Analysis of all past paper questions (2012–2025) for Core Papers 1 & 2 and M2, including answer rates, solutions, and topic breakdown.">涉及 2012–2025 年必修卷一、卷二及 M2 所有這項的答題率、答案及課項分析。</p>
+        <p data-zh="涵蓋 2012–2025 年必修卷一、卷二及 M2 題目的得分率、答案及課題分析。" data-en="Analyses 2012–2025 Core Papers 1 & 2 and M2 questions, including score rates, answers, and topic breakdowns.">涵蓋 2012–2025 年必修卷一、卷二及 M2 題目的得分率、答案及課題分析。</p>
         <table>
           <tr><th data-zh="功能" data-en="Feature">功能</th><th data-zh="說明" data-en="Description">說明</th></tr>
           <tr><td data-zh="長題目分析" data-en="Long questions">長題目分析</td><td data-zh="顯示每題的得分率及答案" data-en="Answer rates and solutions for each question">顯示每題的得分率及答案</td></tr>
           <tr><td data-zh="多項選擇題" data-en="Multiple choice">多項選擇題</td><td data-zh="顯示 ABCD 各選項的選擇比率及正確答案" data-en="Option distribution (A/B/C/D) and correct answers">顯示 ABCD 各選項的選擇比率及正確答案</td></tr>
           <tr><td data-zh="M2 延伸部分" data-en="M2 questions">M2 延伸部分</td><td data-zh="顯示每題的得分率" data-en="Answer rates per question">顯示每題的得分率</td></tr>
         </table>
-        <p><a href="https://kingtmc314.github.io/dse-math-hub/" target="_blank" rel="noopener" style="color: #0369a1; text-decoration: underline; font-weight: 600;" data-zh="開啟 DSE 數學詳細分析" data-en="Open DSE Math Past Papers Analysis">開啟 DSE 數學詳細分析 ↗</a></p>
+        <p><a href="https://dsemathshubstat.kingaihome.org" target="_blank" rel="noopener" style="color: #0369a1; text-decoration: underline; font-weight: 600;" data-zh="開啟 DSE 數學詳細分析" data-en="Open DSE Math Past Papers Analysis">開啟 DSE 數學詳細分析 ↗</a></p>
 
       </section>
 

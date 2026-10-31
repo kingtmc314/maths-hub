@@ -2,7 +2,7 @@
 # Maths Learning Hub — User Guide
 
 > **適用對象 / For:** HKDSE 數學（必修）及數學（模組二 M2）學生
-> **版本 / Version:** 2025–26 學年
+> **版本 / Version:** 2026–27 學年
 > **網站 / Website:** [https://kingtmc314.github.io/maths-hub/](https://kingtmc314.github.io/maths-hub/)
 
 ---
@@ -10,14 +10,16 @@
 ## 目錄 / Table of Contents
 
 1. [平台概覽 Platform Overview](#1-平台概覽-platform-overview)
-2. [三角計算器（2D & 3D）](#2-三角計算器2d--3d--trigonometry-calculator-2d--3d)
-3. [排列、組合及概率](#3-排列組合及概率--permutation-combination--probability)
-4. [線性代數實驗室](#4-線性代數實驗室--linear-algebra-lab)
-5. [級數與歸納法計算器](#5-級數與歸納法計算器--series-and-induction-calculator)
-6. [微分與曲線描繪](#6-微分與曲線描繪--differentiation-and-curve-sketching)
-7. [積分：面積與體積](#7-積分面積與體積--integration-area-and-volume)
-8. [不定積分與定積分](#8-不定積分與定積分--indefinite--definite-integration)
-9. [常見問題 FAQ](#9-常見問題-faq)
+2. [線性規劃（M0）](#2-線性規劃m0--linear-programming-m0)
+3. [三角計算器（2D & 3D）](#3-三角計算器2d--3d--trigonometry-calculator-2d--3d)
+4. [排列、組合及概率](#4-排列組合及概率--permutation-combination--probability)
+5. [線性代數實驗室](#5-線性代數實驗室--linear-algebra-lab)
+6. [級數與歸納法計算器](#6-級數與歸納法計算器--series-and-induction-calculator)
+7. [DSE M2 微積分遊戲](#7-dse-m2-微積分遊戲--dse-m2-calculus-game)
+8. [微分與曲線描繪](#8-微分與曲線描繪--differentiation-and-curve-sketching)
+9. [積分：面積與體積](#9-積分面積與體積--integration-area-and-volume)
+10. [不定積分與定積分](#10-不定積分與定積分--indefinite--definite-integration)
+11. [常見問題 FAQ](#11-常見問題-faq)
 
 ---
 
@@ -29,21 +31,42 @@
 
 | 科目分類 | 工具 | 連結 |
 |----------|------|------|
-| 數學（必修） | 三角計算器（2D & 3D） | [連結](https://kingtmc314.github.io/solid-geometry-calculator/) |
+| 學習資源 | DSE 數學詳細分析 | [連結](https://dsemathshubstat.kingaihome.org) |
+| 數學（必修） | 線性規劃（M0） | [連結](https://dselinearprog.kingaihome.org) |
+| 數學（必修） | 三角計算器（2D & 3D） | [連結](https://dse2d3dtrigo.kingaihome.org) |
 | 數學（必修） | 排列、組合及概率 | [連結](https://kingtmc314.github.io/dse-pc-prob-calculator/) |
-| 數學 (M2) — 代數 | 線性代數實驗室 | [連結](https://kingtmc314.github.io/linear-algebra-lab/) |
-| 數學 (M2) — 代數 | 級數與歸納法計算器 | [連結](https://seriescalc-mdhgko93.manus.space) |
+| 數學 (M2) — 代數 | 線性代數實驗室 | [連結](https://dsem2linearalgebra.kingaihome.org) |
+| 數學 (M2) — 代數 | 級數與歸納法計算器 | [連結](https://miseriescalc.kingaihome.org) |
+| 數學 (M2) — 微積分 | DSE M2 微積分遊戲 | [連結](https://calcquest.kingaihome.org) |
 | 數學 (M2) — 微積分 | 微分與曲線描繪 | [連結](https://kingtmc314.github.io/curve-analyzer/) |
 | 數學 (M2) — 微積分 | 積分：面積與體積 | [連結](https://kingtmc314.github.io/integcalc-lab/) |
 | 數學 (M2) — 微積分 | 不定積分與定積分 | [連結](https://kingtmc314.github.io/integral-calculator-students/) |
+
+
+### DSE 數學詳細分析 / DSE Math Past Papers Analysis
+
+**連結 / Link：** https://dsemathshubstat.kingaihome.org
+
+分析 2012–2025 年必修卷一、卷二及 M2 題目，提供長題目得分率、選擇題選項分布、答案及課題分析。
+
+Analyses 2012–2025 Core Papers 1 & 2 and M2 questions, including score rates, multiple-choice option distributions, answers and topic breakdowns.
 
 **語言切換 / Language Toggle：** 點擊右上角「中 / EN」按鈕即可在中英文介面之間切換，設定會自動儲存。
 
 ---
 
-## 2. 三角計算器（2D & 3D） / Trigonometry Calculator (2D & 3D)
 
-**連結：** https://kingtmc314.github.io/solid-geometry-calculator/
+## 2. 線性規劃（M0） / Linear Programming (M0)
+
+**連結 / Link：** https://dselinearprog.kingaihome.org
+
+以互動圖像建立限制條件、可行域及目標函數，並透過比較頂點找出最大值或最小值。輸入題目時，先確認變數定義、不等式方向及目標函數，再檢查圖像顯示的可行域。
+
+This interactive tool visualises constraints, feasible regions and objective functions. Define the variables and inequalities carefully, inspect the feasible-region vertices, and compare objective-function values to identify the optimum.
+
+## 3. 三角計算器（2D & 3D） / Trigonometry Calculator (2D & 3D)
+
+**連結：** https://dse2d3dtrigo.kingaihome.org
 
 ### 功能概覽
 
@@ -98,7 +121,7 @@
 
 ---
 
-## 3. 排列、組合及概率 / Permutation, Combination & Probability
+## 4. 排列、組合及概率 / Permutation, Combination & Probability
 
 **連結：** https://kingtmc314.github.io/dse-pc-prob-calculator/
 
@@ -137,9 +160,9 @@
 
 ---
 
-## 4. 線性代數實驗室 / Linear Algebra Lab
+## 5. 線性代數實驗室 / Linear Algebra Lab
 
-**連結：** https://kingtmc314.github.io/linear-algebra-lab/
+**連結：** https://dsem2linearalgebra.kingaihome.org
 
 ### 功能概覽
 
@@ -193,9 +216,9 @@
 
 ---
 
-## 5. 級數與歸納法計算器 / Series and Induction Calculator
+## 6. 級數與歸納法計算器 / Series and Induction Calculator
 
-**連結：** https://seriescalc-mdhgko93.manus.space
+**連結：** https://miseriescalc.kingaihome.org
 
 ### 功能概覽
 
@@ -242,7 +265,16 @@ $$\sum_{r=1}^{n} 1 = n, \quad \sum_{r=1}^{n} r = \frac{n(n+1)}{2}, \quad \sum_{r
 
 ---
 
-## 6. 微分與曲線描繪 / Differentiation and Curve Sketching
+
+## 7. DSE M2 微積分遊戲 / DSE M2 Calculus Game
+
+**連結 / Link：** https://calcquest.kingaihome.org
+
+透過分階段挑戰複習微分、積分及曲線分析，並提供即時回饋。建議先完成遊戲任務，再回到相應的 M2 工具查看完整推導及圖像。
+
+Use progressive challenges to review differentiation, integration and curve analysis with instant feedback. After a challenge, revisit the relevant M2 tool for full derivations and visualisations.
+
+## 8. 微分與曲線描繪 / Differentiation and Curve Sketching
 
 **連結：** https://kingtmc314.github.io/curve-analyzer/
 
@@ -304,7 +336,7 @@ $$\sum_{r=1}^{n} 1 = n, \quad \sum_{r=1}^{n} r = \frac{n(n+1)}{2}, \quad \sum_{r
 
 ---
 
-## 7. 積分：面積與體積 / Integration: Area and Volume
+## 9. 積分：面積與體積 / Integration: Area and Volume
 
 **連結：** https://kingtmc314.github.io/integcalc-lab/
 
@@ -353,7 +385,7 @@ $$\sum_{r=1}^{n} 1 = n, \quad \sum_{r=1}^{n} r = \frac{n(n+1)}{2}, \quad \sum_{r
 
 ---
 
-## 8. 不定積分與定積分 / Indefinite & Definite Integration
+## 10. 不定積分與定積分 / Indefinite & Definite Integration
 
 **連結：** https://kingtmc314.github.io/integral-calculator-students/
 
@@ -406,7 +438,7 @@ $$\sum_{r=1}^{n} 1 = n, \quad \sum_{r=1}^{n} r = \frac{n(n+1)}{2}, \quad \sum_{r
 
 ---
 
-## 9. 常見問題 FAQ
+## 11. 常見問題 FAQ
 
 **Q1：工具顯示的答案是近似值還是精確值？**
 所有工具均以精確值輸出（分數、根號、π、e），不使用近似小數，確保答案符合 HKDSE 考試要求。
