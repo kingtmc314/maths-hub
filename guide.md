@@ -47,9 +47,9 @@
 
 **連結 / Link：** https://dsemathshubstat.kingaihome.org
 
-分析 2012–2025 年必修卷一、卷二及 M2 題目，提供長題目得分率、選擇題選項分布、答案及課題分析。
+分析 2012–2026 年必修卷一、卷二及 M2 題目，提供長題目得分率、選擇題選項分布、答案及課題分析；頁面顯示的最新年份會由 DSE Hub 自動同步。
 
-Analyses 2012–2025 Core Papers 1 & 2 and M2 questions, including score rates, multiple-choice option distributions, answers and topic breakdowns.
+Analyses 2012–2026 Core Papers 1 & 2 and M2 questions, including score rates, multiple-choice option distributions, answers and topic breakdowns. The displayed latest year is synchronised automatically from the DSE Hub.
 
 **語言切換 / Language Toggle：** 點擊右上角「中 / EN」按鈕即可在中英文介面之間切換，設定會自動儲存。
 
