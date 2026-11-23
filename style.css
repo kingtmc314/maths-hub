@@ -718,6 +718,31 @@ body {
 
 /* ── RESPONSIVE ── */
 
+/* Accessible, resilient card layout for bilingual titles and long URLs. */
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 3px solid rgba(14, 165, 233, 0.55);
+  outline-offset: 3px;
+}
+
+.tool-card,
+.card-top,
+.card-body,
+.card-footer {
+  min-width: 0;
+}
+
+.card-title,
+.card-desc,
+.tool-header-title,
+.tool-header-link {
+  overflow-wrap: anywhere;
+}
+
+.card-title,
+.section-title {
+  text-wrap: balance;
+}
+
 /* Large desktop: 1200px+ — 3-column cards */
 @media (min-width: 1200px) {
   .cards-grid { grid-template-columns: repeat(3, 1fr); }

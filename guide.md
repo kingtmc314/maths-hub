@@ -20,7 +20,9 @@
 9. [積分：面積與體積](#9-積分面積與體積--integration-area-and-volume)
 10. [不定積分與定積分](#10-不定積分與定積分--indefinite--definite-integration)
 11. [圖像變換（M0）](#11-圖像變換m0--graph-transformations-m0)
-12. [常見問題 FAQ](#12-常見問題-faq)
+12. [StatSpace 統計實驗室](#12-statspace-統計實驗室--statspace-statistics-lab)
+13. [二次函數實驗室](#13-二次函數實驗室--quadratic-functions-lab)
+14. [常見問題 FAQ](#14-常見問題-faq)
 
 ---
 
@@ -37,6 +39,8 @@
 | 數學（必修） | 三角計算器（2D & 3D） | [連結](https://dse2d3dtrigo.kingaihome.org) |
 | 數學（必修） | 排列、組合及概率 | [連結](https://kingtmc314.github.io/dse-pc-prob-calculator/) |
 | 數學（必修） | 圖像變換（M0） | [連結](https://dsegraphtransformation.kingaihome.org) |
+| 數學（必修） | StatSpace 統計實驗室 | [連結](https://stats-view-dse.kingaihome.org/) |
+| 數學（必修） | 二次函數實驗室 | [連結](https://quadraticfunctions.kingaihome.org/) |
 | 數學 (M2) — 代數 | 線性代數實驗室 | [連結](https://dsem2linearalgebra.kingaihome.org) |
 | 數學 (M2) — 代數 | 級數與歸納法計算器 | [連結](https://miseriescalc.kingaihome.org) |
 | 數學 (M2) — 微積分 | DSE M2 微積分遊戲 | [連結](https://calcquest.kingaihome.org) |
@@ -455,7 +459,36 @@ Use interactive graphs to explore translations, reflections, stretches and combi
 - 伸縮 / Stretch：理解 $a$ 及 $b$ 對垂直及水平伸縮的影響 / Understand vertical and horizontal stretches controlled by $a$ and $b$.
 - 組合變換 / Combined transformations：逐步組合多種變換並比較圖像 / Combine transformations step by step and compare graphs.
 
-## 12. 常見問題 FAQ
+
+### 12. StatSpace 統計實驗室 / StatSpace Statistics Lab
+
+**連結 / Link：** https://stats-view-dse.kingaihome.org/
+
+透過互動圖表和數據操作理解統計概念，適合用作 HKDSE 必修統計課題的視覺化學習及探究工具。
+
+Use interactive charts and data exploration to understand statistics. It is suitable as a visual learning and investigation tool for HKDSE Core statistics topics.
+
+**建議使用方法 / Suggested workflow：**
+
+1. 選擇或輸入一組數據，觀察圖表如何反映數據特徵。 / Choose or enter a data set and observe how the chart reflects its features.
+2. 比較集中趨勢、分散程度及圖表形狀，並以統計量驗證觀察。 / Compare central tendency, spread and chart shape, then use statistical measures to verify your observations.
+3. 改變數據或參數，記錄圖表和統計量的變化。 / Change the data or parameters and record the changes in charts and measures.
+
+### 13. 二次函數實驗室 / Quadratic Functions Lab
+
+**連結 / Link：** https://quadraticfunctions.kingaihome.org/
+
+透過可互動的拋物線研究二次函數 $y=ax^2+bx+c$，並連結代數係數、頂點、對稱軸、根和截距之間的關係。
+
+Use an interactive parabola to investigate $y=ax^2+bx+c$ and connect its coefficients with the vertex, axis of symmetry, roots and intercepts.
+
+**探索重點 / What to explore：**
+
+- 參數 $a,b,c$ / Parameters $a,b,c$：觀察係數改變如何影響開口方向、寬窄及位置 / See how coefficients change opening direction, width and position.
+- 頂點及對稱軸 / Vertex and axis of symmetry：從圖像和代數式找出兩者 / Find both from the graph and expression.
+- 根及截距 / Roots and intercepts：比較截距和判別式所反映的圖像特徵 / Compare intercepts and graph features reflected by the discriminant.
+
+## 14. 常見問題 FAQ
 
 **Q1：工具顯示的答案是近似值還是精確值？**
 所有工具均以精確值輸出（分數、根號、π、e），不使用近似小數，確保答案符合 HKDSE 考試要求。
