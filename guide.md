@@ -32,15 +32,19 @@
 
 **The Maths Learning Hub** is a curated portal integrating interactive tools for HKDSE Core Mathematics and Module 2 (M2). All tools output exact-value answers (fractions, surds, π) with full LaTeX step-by-step working, and support bilingual (Chinese/English) interface switching.
 
+必修工具按照 HKDSE 初中及高中數學課程的學習脈絡分為三個範疇：**代數**、**統計**，以及**幾何、空間與度量**。
+
+Core tools are organised according to the HKDSE junior and senior curriculum strands: **Algebra**, **Statistics**, and **Geometry, Space & Measurement**.
+
 | 科目分類 | 工具 | 連結 |
 |----------|------|------|
 | 學習資源 | DSE 數學詳細分析 | [連結](https://dsemathshubstat.kingaihome.org) |
-| 數學（必修） | 線性規劃（M0） | [連結](https://dselinearprog.kingaihome.org) |
-| 數學（必修） | 三角計算器（2D & 3D） | [連結](https://dse2d3dtrigo.kingaihome.org) |
-| 數學（必修） | 排列、組合及概率 | [連結](https://kingtmc314.github.io/dse-pc-prob-calculator/) |
-| 數學（必修） | 圖像變換（M0） | [連結](https://dsegraphtransformation.kingaihome.org) |
-| 數學（必修） | StatSpace 統計實驗室 | [連結](https://stats-view-dse.kingaihome.org/) |
-| 數學（必修） | 二次函數實驗室 | [連結](https://quadraticfunctions.kingaihome.org/) |
+| 數學（必修）— 代數 | 線性規劃（M0） | [連結](https://dselinearprog.kingaihome.org) |
+| 數學（必修）— 幾何、空間與度量 | 三角計算器（2D & 3D） | [連結](https://dse2d3dtrigo.kingaihome.org) |
+| 數學（必修）— 統計 | 排列、組合及概率 | [連結](https://kingtmc314.github.io/dse-pc-prob-calculator/) |
+| 數學（必修）— 代數 | 圖像變換（M0） | [連結](https://dsegraphtransformation.kingaihome.org) |
+| 數學（必修）— 統計 | StatSpace 統計實驗室 | [連結](https://stats-view-dse.kingaihome.org/) |
+| 數學（必修）— 代數 | 二次函數實驗室 | [連結](https://quadraticfunctions.kingaihome.org/) |
 | 數學 (M2) — 代數 | 線性代數實驗室 | [連結](https://dsem2linearalgebra.kingaihome.org) |
 | 數學 (M2) — 代數 | 級數與歸納法計算器 | [連結](https://miseriescalc.kingaihome.org) |
 | 數學 (M2) — 微積分 | DSE M2 微積分遊戲 | [連結](https://calcquest.kingaihome.org) |

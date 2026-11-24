@@ -187,145 +187,44 @@
       <div class="section-header">
         <div class="section-pill core-pill" data-zh="必修科目" data-en="Compulsory Subject">必修科目</div>
         <h2 class="section-title" data-zh="數學（必修）" data-en="Mathematics (Core)">數學（必修）</h2>
-        <p class="section-desc" data-zh="涵蓋 HKDSE 數學必修部分的互動工具" data-en="Interactive tools covering the HKDSE Mathematics compulsory curriculum">涵蓋 HKDSE 數學必修部分的互動工具</p>
+        <p class="section-desc" data-zh="按 HKDSE 課程主題整理：代數、統計，以及幾何、空間與度量" data-en="Organised by HKDSE curriculum strands: Algebra, Statistics, and Geometry, Space & Measurement">按 HKDSE 課程主題整理：代數、統計，以及幾何、空間與度量</p>
       </div>
-      <div class="cards-grid">
-
-        <!-- Card: 3D 立體三角 -->
+      <!-- Core curriculum strands follow the HKDSE junior/senior learning structure. -->
+      <div class="sub-category core-sub-category">
+        <div class="sub-category-header">
+          <span class="sub-cat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="7" cy="7" r="1" fill="currentColor"/><circle cx="17" cy="12" r="1" fill="currentColor"/></svg></span>
+          <h3 class="sub-cat-title" data-zh="代數" data-en="Algebra">代數</h3>
+          <span class="sub-cat-count" data-zh="3 個工具" data-en="3 tools">3 個工具</span>
+        </div>
+        <div class="cards-grid">
+        <!-- Card: Linear Programming -->
         <article class="tool-card">
           <div class="card-top">
             <div class="card-icon-box core-icon">
               <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
-                <polygon points="28,6 50,42 6,42" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
-                <line x1="28" y1="6" x2="28" y2="42" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4,3" opacity="0.6"/>
-                <line x1="17" y1="24" x2="39" y2="24" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4,3" opacity="0.6"/>
-                <circle cx="28" cy="6" r="2.5" fill="currentColor"/>
-                <circle cx="50" cy="42" r="2.5" fill="currentColor"/>
-                <circle cx="6" cy="42" r="2.5" fill="currentColor"/>
+                <path d="M10 44 24 12l10 22 12-24" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="24" cy="12" r="3" fill="currentColor"/><circle cx="34" cy="34" r="3" fill="currentColor"/>
               </svg>
             </div>
             <div class="card-tags">
-              <span class="tag core-tag" data-zh="2D 三角" data-en="2D Trigonometry">2D 三角</span>
-              <span class="tag core-tag" data-zh="3D 立體" data-en="3D Geometry">3D 立體</span>
+              <span class="tag core-tag" data-zh="M0" data-en="M0">M0</span>
+              <span class="tag core-tag" data-zh="線性規劃" data-en="Linear Programming">線性規劃</span>
             </div>
           </div>
           <div class="card-body">
-            <h3 class="card-title" data-zh="三角計算器（2D &amp; 3D）" data-en="Trigonometry Calculator (2D &amp; 3D)">三角計算器（2D &amp; 3D）</h3>
-            <p class="card-desc" data-zh="涵蓋平面及立體三角，輸入邊長與角度，自動計算未知量，以 LaTeX 顯示完整解題步驟。" data-en="Covers both 2D and 3D trigonometry. Input side lengths and angles to solve for unknowns with full LaTeX step-by-step solutions.">涵蓋平面及立體三角，輸入邊長與角度，自動計算未知量，以 LaTeX 顯示完整解題步驟。</p>
-            <!-- KaTeX formula -->
-            <div class="card-formula">$$a^2 = b^2 + c^2 - 2bc\cos A$$</div>
+            <h3 class="card-title" data-zh="線性規劃" data-en="Linear Programming">線性規劃</h3>
+            <p class="card-desc" data-zh="以圖像及互動方式學習線性規劃，建立限制條件、可行域及目標函數，找出最優解。" data-en="Learn linear programming interactively by building constraints, feasible regions and objective functions to find optimal solutions.">以圖像及互動方式學習線性規劃，建立限制條件、可行域及目標函數，找出最優解。</p>
+            <div class="card-formula">$$Z = ax + by \quad\text{subject to constraints}$$</div>
             <ul class="card-features">
-              <li data-zh="2D 平面三角（正弦 / 餘弦定理）" data-en="2D plane trigonometry (Sine / Cosine Rule)">2D 平面三角（正弦 / 餘弦定理）</li>
-              <li data-zh="3D 立體幾何角度與距離計算" data-en="3D solid geometry angles and distances">3D 立體幾何角度與距離計算</li>
-              <li data-zh="LaTeX 逐步解題 · PDF 匯出" data-en="LaTeX step-by-step · PDF export">LaTeX 逐步解題 · PDF 匯出</li>
+              <li data-zh="繪畫限制線及可行域" data-en="Plot constraint lines and feasible regions">繪畫限制線及可行域</li>
+              <li data-zh="檢查頂點及最優解" data-en="Check vertices and optimal solutions">檢查頂點及最優解</li>
+              <li data-zh="適合 HKDSE M0 線性規劃題型" data-en="Designed for HKDSE M0 linear programming problems">適合 HKDSE M0 線性規劃題型</li>
             </ul>
           </div>
           <div class="card-footer">
-            <a href="https://dse2d3dtrigo.kingaihome.org" target="_blank" rel="noopener" class="launch-btn core-btn">
+            <a href="https://dselinearprog.kingaihome.org" target="_blank" rel="noopener" class="launch-btn core-btn">
               <span data-zh="開啟工具" data-en="Launch Tool">開啟工具</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </article>
-
-              <!-- Card: 排列與組合及概率 -->
-        <article class="tool-card">
-          <div class="card-top">
-            <div class="card-icon-box core-icon">
-              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
-                <circle cx="14" cy="14" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
-                <circle cx="42" cy="14" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
-                <circle cx="28" cy="40" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
-                <line x1="20" y1="14" x2="36" y2="14" stroke="currentColor" stroke-width="1.8" opacity="0.6"/>
-                <line x1="17" y1="19" x2="25" y2="35" stroke="currentColor" stroke-width="1.8" opacity="0.6"/>
-                <line x1="39" y1="19" x2="31" y2="35" stroke="currentColor" stroke-width="1.8" opacity="0.6"/>
-              </svg>
-            </div>
-            <div class="card-tags">
-              <span class="tag core-tag" data-zh="排列" data-en="Permutation">排列</span>
-              <span class="tag core-tag" data-zh="組合" data-en="Combination">組合</span>
-              <span class="tag core-tag" data-zh="概率" data-en="Probability">概率</span>
-            </div>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title" data-zh="排列、組合及概率" data-en="Permutation, Combination &amp; Probability">排列、組合及概率</h3>
-            <p class="card-desc" data-zh="計算排列數、組合數及概率，支援條件概率、互斥事件及獨立事件，逐步顯示解題過程。" data-en="Calculate permutations, combinations and probabilities including conditional probability, mutually exclusive and independent events with step-by-step solutions.">計算排列數、組合數及概率，支援條件概率、互斥事件及獨立事件，逐步顯示解題過程。</p>
-            <div class="card-formula">$$P(A|B) = \frac{P(A \cap B)}{P(B)}$$</div>
-            <ul class="card-features">
-              <li data-zh="排列 P(n,r) · 組合 C(n,r) 計算" data-en="Permutation P(n,r) · Combination C(n,r)">排列 P(n,r) · 組合 C(n,r) 計算</li>
-              <li data-zh="條件概率 · 互斥 · 獨立事件" data-en="Conditional probability · Mutually exclusive · Independent">條件概率 · 互斥 · 獨立事件</li>
-              <li data-zh="逐步解題過程顯示" data-en="Step-by-step solution display">逐步解題過程顯示</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <a href="https://kingtmc314.github.io/dse-pc-prob-calculator/" target="_blank" rel="noopener" class="launch-btn core-btn">
-              <span data-zh="開啟工具" data-en="Launch Tool">開啟工具</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </article>
-
-
-            <!-- Card: Statistics Visualiser -->
-        <article class="tool-card">
-          <div class="card-top">
-            <div class="card-icon-box core-icon">
-              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36" aria-hidden="true">
-                <path d="M10 45V11M10 45h36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M17 37v-9M27 37V19M37 37V13" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="card-tags">
-              <span class="tag core-tag" data-zh="必修" data-en="Core">必修</span>
-              <span class="tag core-tag" data-zh="統計" data-en="Statistics">統計</span>
-            </div>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title" data-zh="StatSpace 統計實驗室" data-en="StatSpace Statistics Lab">StatSpace 統計實驗室</h3>
-            <p class="card-desc" data-zh="以互動圖表探索數據、統計量及分布，將抽象的統計概念轉化為可視化學習體驗。" data-en="Explore data, statistical measures and distributions with interactive charts that turn abstract statistics into a visual learning experience.">以互動圖表探索數據、統計量及分布，將抽象的統計概念轉化為可視化學習體驗。</p>
-            <ul class="card-features">
-              <li data-zh="互動數據及圖表展示" data-en="Interactive data and chart visualisation">互動數據及圖表展示</li>
-              <li data-zh="適合 HKDSE 必修統計課題" data-en="Suitable for HKDSE Core statistics topics">適合 HKDSE 必修統計課題</li>
-              <li data-zh="從圖像理解統計概念" data-en="Understand statistics through visual exploration">從圖像理解統計概念</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <a href="https://stats-view-dse.kingaihome.org/" target="_blank" rel="noopener" class="launch-btn core-btn">
-              <span data-zh="開啟工具" data-en="Launch Tool">開啟工具</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Card: Quadratic Functions -->
-        <article class="tool-card">
-          <div class="card-top">
-            <div class="card-icon-box core-icon">
-              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36" aria-hidden="true">
-                <path d="M10 45V11M10 45h36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M15 37c5-1 7-20 13-20s8 19 13 20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                <circle cx="28" cy="17" r="2.5" fill="currentColor"/>
-              </svg>
-            </div>
-            <div class="card-tags">
-              <span class="tag core-tag" data-zh="必修" data-en="Core">必修</span>
-              <span class="tag core-tag" data-zh="二次函數" data-en="Quadratics">二次函數</span>
-            </div>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title" data-zh="二次函數實驗室" data-en="Quadratic Functions Lab">二次函數實驗室</h3>
-            <p class="card-desc" data-zh="以互動拋物線研究二次函數的圖像、頂點、對稱軸、根及參數變化，鞏固必修代數概念。" data-en="Investigate parabolas, vertices, axes of symmetry, roots and parameter changes interactively to strengthen Core algebra concepts.">以互動拋物線研究二次函數的圖像、頂點、對稱軸、根及參數變化，鞏固必修代數概念。</p>
-            <div class="card-formula">$$y=ax^2+bx+c$$</div>
-            <ul class="card-features">
-              <li data-zh="觀察 a、b、c 對拋物線的影響" data-en="See how a, b and c change the parabola">觀察 a、b、c 對拋物線的影響</li>
-              <li data-zh="探索頂點、對稱軸及截距" data-en="Explore vertices, axes of symmetry and intercepts">探索頂點、對稱軸及截距</li>
-              <li data-zh="連結代數式與函數圖像" data-en="Connect algebraic forms with graph behaviour">連結代數式與函數圖像</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <a href="https://quadraticfunctions.kingaihome.org/" target="_blank" rel="noopener" class="launch-btn core-btn">
-              <span data-zh="開啟工具" data-en="Launch Tool">開啟工具</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
           </div>
         </article>
@@ -364,37 +263,162 @@
           </div>
         </article>
 
-        <!-- Card: Linear Programming -->
+        <!-- Card: Quadratic Functions -->
+        <article class="tool-card">
+          <div class="card-top">
+            <div class="card-icon-box core-icon">
+              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36" aria-hidden="true">
+                <path d="M10 45V11M10 45h36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M15 37c5-1 7-20 13-20s8 19 13 20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="28" cy="17" r="2.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="card-tags">
+              <span class="tag core-tag" data-zh="必修" data-en="Core">必修</span>
+              <span class="tag core-tag" data-zh="二次函數" data-en="Quadratics">二次函數</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title" data-zh="二次函數實驗室" data-en="Quadratic Functions Lab">二次函數實驗室</h3>
+            <p class="card-desc" data-zh="以互動拋物線研究二次函數的圖像、頂點、對稱軸、根及參數變化，鞏固必修代數概念。" data-en="Investigate parabolas, vertices, axes of symmetry, roots and parameter changes interactively to strengthen Core algebra concepts.">以互動拋物線研究二次函數的圖像、頂點、對稱軸、根及參數變化，鞏固必修代數概念。</p>
+            <div class="card-formula">$$y=ax^2+bx+c$$</div>
+            <ul class="card-features">
+              <li data-zh="觀察 a、b、c 對拋物線的影響" data-en="See how a, b and c change the parabola">觀察 a、b、c 對拋物線的影響</li>
+              <li data-zh="探索頂點、對稱軸及截距" data-en="Explore vertices, axes of symmetry and intercepts">探索頂點、對稱軸及截距</li>
+              <li data-zh="連結代數式與函數圖像" data-en="Connect algebraic forms with graph behaviour">連結代數式與函數圖像</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="https://quadraticfunctions.kingaihome.org/" target="_blank" rel="noopener" class="launch-btn core-btn">
+              <span data-zh="開啟工具" data-en="Launch Tool">開啟工具</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </article>
+        </div>
+      </div>
+
+      <div class="sub-category core-sub-category">
+        <div class="sub-category-header">
+          <span class="sub-cat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19V5M5 19h15"/><path d="M9 16v-4M13 16V8M17 16V5"/></svg></span>
+          <h3 class="sub-cat-title" data-zh="統計" data-en="Statistics">統計</h3>
+          <span class="sub-cat-count" data-zh="2 個工具" data-en="2 tools">2 個工具</span>
+        </div>
+        <div class="cards-grid">
+        <!-- Card: 排列與組合及概率 -->
         <article class="tool-card">
           <div class="card-top">
             <div class="card-icon-box core-icon">
               <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
-                <path d="M10 44 24 12l10 22 12-24" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="24" cy="12" r="3" fill="currentColor"/><circle cx="34" cy="34" r="3" fill="currentColor"/>
+                <circle cx="14" cy="14" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+                <circle cx="42" cy="14" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+                <circle cx="28" cy="40" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+                <line x1="20" y1="14" x2="36" y2="14" stroke="currentColor" stroke-width="1.8" opacity="0.6"/>
+                <line x1="17" y1="19" x2="25" y2="35" stroke="currentColor" stroke-width="1.8" opacity="0.6"/>
+                <line x1="39" y1="19" x2="31" y2="35" stroke="currentColor" stroke-width="1.8" opacity="0.6"/>
               </svg>
             </div>
             <div class="card-tags">
-              <span class="tag core-tag" data-zh="M0" data-en="M0">M0</span>
-              <span class="tag core-tag" data-zh="線性規劃" data-en="Linear Programming">線性規劃</span>
+              <span class="tag core-tag" data-zh="排列" data-en="Permutation">排列</span>
+              <span class="tag core-tag" data-zh="組合" data-en="Combination">組合</span>
+              <span class="tag core-tag" data-zh="概率" data-en="Probability">概率</span>
             </div>
           </div>
           <div class="card-body">
-            <h3 class="card-title" data-zh="線性規劃" data-en="Linear Programming">線性規劃</h3>
-            <p class="card-desc" data-zh="以圖像及互動方式學習線性規劃，建立限制條件、可行域及目標函數，找出最優解。" data-en="Learn linear programming interactively by building constraints, feasible regions and objective functions to find optimal solutions.">以圖像及互動方式學習線性規劃，建立限制條件、可行域及目標函數，找出最優解。</p>
-            <div class="card-formula">$$Z = ax + by \quad\text{subject to constraints}$$</div>
+            <h3 class="card-title" data-zh="排列、組合及概率" data-en="Permutation, Combination &amp; Probability">排列、組合及概率</h3>
+            <p class="card-desc" data-zh="計算排列數、組合數及概率，支援條件概率、互斥事件及獨立事件，逐步顯示解題過程。" data-en="Calculate permutations, combinations and probabilities including conditional probability, mutually exclusive and independent events with step-by-step solutions.">計算排列數、組合數及概率，支援條件概率、互斥事件及獨立事件，逐步顯示解題過程。</p>
+            <div class="card-formula">$$P(A|B) = \frac{P(A \cap B)}{P(B)}$$</div>
             <ul class="card-features">
-              <li data-zh="繪畫限制線及可行域" data-en="Plot constraint lines and feasible regions">繪畫限制線及可行域</li>
-              <li data-zh="檢查頂點及最優解" data-en="Check vertices and optimal solutions">檢查頂點及最優解</li>
-              <li data-zh="適合 HKDSE M0 線性規劃題型" data-en="Designed for HKDSE M0 linear programming problems">適合 HKDSE M0 線性規劃題型</li>
+              <li data-zh="排列 P(n,r) · 組合 C(n,r) 計算" data-en="Permutation P(n,r) · Combination C(n,r)">排列 P(n,r) · 組合 C(n,r) 計算</li>
+              <li data-zh="條件概率 · 互斥 · 獨立事件" data-en="Conditional probability · Mutually exclusive · Independent">條件概率 · 互斥 · 獨立事件</li>
+              <li data-zh="逐步解題過程顯示" data-en="Step-by-step solution display">逐步解題過程顯示</li>
             </ul>
           </div>
           <div class="card-footer">
-            <a href="https://dselinearprog.kingaihome.org" target="_blank" rel="noopener" class="launch-btn core-btn">
+            <a href="https://kingtmc314.github.io/dse-pc-prob-calculator/" target="_blank" rel="noopener" class="launch-btn core-btn">
               <span data-zh="開啟工具" data-en="Launch Tool">開啟工具</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
           </div>
         </article>
+
+        <!-- Card: Statistics Visualiser -->
+        <article class="tool-card">
+          <div class="card-top">
+            <div class="card-icon-box core-icon">
+              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36" aria-hidden="true">
+                <path d="M10 45V11M10 45h36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M17 37v-9M27 37V19M37 37V13" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="card-tags">
+              <span class="tag core-tag" data-zh="必修" data-en="Core">必修</span>
+              <span class="tag core-tag" data-zh="統計" data-en="Statistics">統計</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title" data-zh="StatSpace 統計實驗室" data-en="StatSpace Statistics Lab">StatSpace 統計實驗室</h3>
+            <p class="card-desc" data-zh="以互動圖表探索數據、統計量及分布，將抽象的統計概念轉化為可視化學習體驗。" data-en="Explore data, statistical measures and distributions with interactive charts that turn abstract statistics into a visual learning experience.">以互動圖表探索數據、統計量及分布，將抽象的統計概念轉化為可視化學習體驗。</p>
+            <ul class="card-features">
+              <li data-zh="互動數據及圖表展示" data-en="Interactive data and chart visualisation">互動數據及圖表展示</li>
+              <li data-zh="適合 HKDSE 必修統計課題" data-en="Suitable for HKDSE Core statistics topics">適合 HKDSE 必修統計課題</li>
+              <li data-zh="從圖像理解統計概念" data-en="Understand statistics through visual exploration">從圖像理解統計概念</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="https://stats-view-dse.kingaihome.org/" target="_blank" rel="noopener" class="launch-btn core-btn">
+              <span data-zh="開啟工具" data-en="Launch Tool">開啟工具</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </article>
+        </div>
+      </div>
+
+      <div class="sub-category core-sub-category">
+        <div class="sub-category-header">
+          <span class="sub-cat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18 12 4l8 14H4Z"/><path d="M12 4v14M8 11h8"/></svg></span>
+          <h3 class="sub-cat-title" data-zh="幾何、空間與度量" data-en="Geometry, Space & Measurement">幾何、空間與度量</h3>
+          <span class="sub-cat-count" data-zh="1 個工具" data-en="1 tool">1 個工具</span>
+        </div>
+        <div class="cards-grid">
+        <!-- Card: 3D 立體三角 -->
+        <article class="tool-card">
+          <div class="card-top">
+            <div class="card-icon-box core-icon">
+              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                <polygon points="28,6 50,42 6,42" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
+                <line x1="28" y1="6" x2="28" y2="42" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4,3" opacity="0.6"/>
+                <line x1="17" y1="24" x2="39" y2="24" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4,3" opacity="0.6"/>
+                <circle cx="28" cy="6" r="2.5" fill="currentColor"/>
+                <circle cx="50" cy="42" r="2.5" fill="currentColor"/>
+                <circle cx="6" cy="42" r="2.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="card-tags">
+              <span class="tag core-tag" data-zh="2D 三角" data-en="2D Trigonometry">2D 三角</span>
+              <span class="tag core-tag" data-zh="3D 立體" data-en="3D Geometry">3D 立體</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title" data-zh="三角計算器（2D &amp; 3D）" data-en="Trigonometry Calculator (2D &amp; 3D)">三角計算器（2D &amp; 3D）</h3>
+            <p class="card-desc" data-zh="涵蓋平面及立體三角，輸入邊長與角度，自動計算未知量，以 LaTeX 顯示完整解題步驟。" data-en="Covers both 2D and 3D trigonometry. Input side lengths and angles to solve for unknowns with full LaTeX step-by-step solutions.">涵蓋平面及立體三角，輸入邊長與角度，自動計算未知量，以 LaTeX 顯示完整解題步驟。</p>
+            <!-- KaTeX formula -->
+            <div class="card-formula">$$a^2 = b^2 + c^2 - 2bc\cos A$$</div>
+            <ul class="card-features">
+              <li data-zh="2D 平面三角（正弦 / 餘弦定理）" data-en="2D plane trigonometry (Sine / Cosine Rule)">2D 平面三角（正弦 / 餘弦定理）</li>
+              <li data-zh="3D 立體幾何角度與距離計算" data-en="3D solid geometry angles and distances">3D 立體幾何角度與距離計算</li>
+              <li data-zh="LaTeX 逐步解題 · PDF 匯出" data-en="LaTeX step-by-step · PDF export">LaTeX 逐步解題 · PDF 匯出</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="https://dse2d3dtrigo.kingaihome.org" target="_blank" rel="noopener" class="launch-btn core-btn">
+              <span data-zh="開啟工具" data-en="Launch Tool">開啟工具</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </article>
+        </div>
       </div>
     </section>
 
