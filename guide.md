@@ -22,7 +22,8 @@
 11. [圖像變換（M0）](#11-圖像變換m0--graph-transformations-m0)
 12. [StatSpace 統計實驗室](#12-statspace-統計實驗室--statspace-statistics-lab)
 13. [二次函數實驗室](#13-二次函數實驗室--quadratic-functions-lab)
-14. [常見問題 FAQ](#14-常見問題-faq)
+14. [多項式動態實驗室（M0）](#14-多項式動態實驗室m0--polynomial-dse-lab-m0)
+15. [常見問題 FAQ](#15-常見問題-faq)
 
 ---
 
@@ -45,6 +46,7 @@ Core tools are organised according to the HKDSE junior and senior curriculum str
 | 數學（必修）— 代數 | 圖像變換（M0） | [連結](https://dsegraphtransformation.kingaihome.org) |
 | 數學（必修）— 統計 | StatSpace 統計實驗室 | [連結](https://stats-view-dse.kingaihome.org/) |
 | 數學（必修）— 代數 | 二次函數實驗室 | [連結](https://quadraticfunctions.kingaihome.org/) |
+| 數學（必修）— 代數 | 多項式動態實驗室（M0） | [連結](https://polynomial-dse.kingaihome.org/) |
 | 數學 (M2) — 代數 | 線性代數實驗室 | [連結](https://dsem2linearalgebra.kingaihome.org) |
 | 數學 (M2) — 代數 | 級數與歸納法計算器 | [連結](https://miseriescalc.kingaihome.org) |
 | 數學 (M2) — 微積分 | DSE M2 微積分遊戲 | [連結](https://calcquest.kingaihome.org) |
@@ -492,7 +494,23 @@ Use an interactive parabola to investigate $y=ax^2+bx+c$ and connect its coeffic
 - 頂點及對稱軸 / Vertex and axis of symmetry：從圖像和代數式找出兩者 / Find both from the graph and expression.
 - 根及截距 / Roots and intercepts：比較截距和判別式所反映的圖像特徵 / Compare intercepts and graph features reflected by the discriminant.
 
-## 14. 常見問題 FAQ
+## 14. 多項式動態實驗室（M0） / Polynomial DSE Lab (M0)
+
+**連結 / Link：** https://polynomial-dse.kingaihome.org/
+
+透過互動圖像及代數操作探索多項式的展開、因式分解、根、圖像及係數變化，適合 HKDSE M0 代數學習。
+
+Explore polynomial expansion, factorisation, roots, graphs and coefficient changes through interactive visuals and algebraic operations for HKDSE M0 algebra.
+
+### 建議使用方法 / Suggested Workflow
+
+1. 輸入或選擇多項式，觀察其展開式、因式分解及圖像。 / Enter or choose a polynomial and inspect its expansion, factorisation and graph.
+2. 改變係數，比較圖像形狀、截距及根如何變化。 / Change the coefficients and compare how the graph, intercepts and roots change.
+3. 利用代數結果驗證圖像觀察，並記錄不同多項式之間的關係。 / Use the algebraic results to verify observations and record relationships between different polynomials.
+
+$$P(x)=a_nx^n+\cdots+a_1x+a_0$$
+
+## 15. 常見問題 FAQ
 
 **Q1：工具顯示的答案是近似值還是精確值？**
 所有工具均以精確值輸出（分數、根號、π、e），不使用近似小數，確保答案符合 HKDSE 考試要求。
