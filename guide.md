@@ -8,25 +8,23 @@
 ---
 
 ## 目錄 / Table of Contents
-
 1. [平台概覽 Platform Overview](#1-平台概覽-platform-overview)
 2. [線性規劃（M0）](#2-線性規劃m0--linear-programming-m0)
 3. [三角計算器（2D & 3D）](#3-三角計算器2d--3d--trigonometry-calculator-2d--3d)
 4. [軌跡實驗室（M0）](#4-軌跡實驗室m0--locus-lab-m0)
-5. [立體切面實驗室（M0）](#5-立體切面實驗室m0--mensuration-net-lab-m0)
-6. [排列、組合及概率](#6-排列組合及概率--permutation-combination--probability)
-7. [線性代數實驗室](#7-線性代數實驗室--linear-algebra-lab)
-8. [級數與歸納法計算器](#8-級數與歸納法計算器--series-and-induction-calculator)
-9. [DSE M2 微積分遊戲](#9-dse-m2-微積分遊戲--dse-m2-calculus-game)
-10. [微分與曲線描繪](#10-微分與曲線描繪--differentiation-and-curve-sketching)
-11. [積分：面積與體積](#11-積分面積與體積--integration-area-and-volume)
-12. [不定積分與定積分](#12-不定積分與定積分--indefinite--definite-integration)
-13. [圖像變換（M0）](#13-圖像變換m0--graph-transformations-m0)
-14. [StatSpace 統計實驗室](#14-statspace-統計實驗室--statspace-statistics-lab)
-15. [二次函數實驗室](#15-二次函數實驗室--quadratic-functions-lab)
-16. [多項式動態實驗室（M0）](#16-多項式動態實驗室m0--polynomial-dse-lab-m0)
+5. [圓的幾何性質（M0）](#circle-geometry-m0)
+6. [立體切面實驗室（M0）](#6-立體切面實驗室m0--mensuration-net-lab-m0)
+7. [排列、組合及概率](#7-排列組合及概率--permutation-combination--probability)
+8. [生活化概率與期望值模擬器（M0）](#probability-ev-simulator-m0)
+9. [線性代數實驗室](#9-線性代數實驗室--linear-algebra-lab)
+10. [級數與歸納法計算器](#10-級數與歸納法計算器--series-and-induction-calculator)
+11. [DSE M2 微積分遊戲](#11-dse-m2-微積分遊戲--dse-m2-calculus-game)
+12. [微分與曲線描繪](#12-微分與曲線描繪--differentiation-and-curve-sketching)
+13. [積分：面積與體積](#13-積分面積與體積--integration-area-and-volume)
+14. [不定積分與定積分](#14-不定積分與定積分--indefinite--definite-integration)
+15. [多項式動態實驗室（M0）](#15-多項式動態實驗室m0--polynomial-dse-lab-m0)
+16. [MathFlow｜數學動畫實驗室（M0）](#mathflow-maths-animation-lab-m0)
 17. [常見問題 FAQ](#17-常見問題-faq)
-
 ---
 
 ## 1. 平台概覽 Platform Overview
@@ -46,10 +44,13 @@ Core tools are organised according to the HKDSE junior and senior curriculum str
 | 數學（必修）— 幾何、空間與度量 | 三角計算器（2D & 3D） | [連結](https://dse2d3dtrigo.kingaihome.org) |
 | 數學（必修）— 幾何、空間與度量 | 軌跡實驗室（M0） | [連結](https://kingtmc314.github.io/locus-lab/) |
 | 數學（必修）— 幾何、空間與度量 | 立體切面實驗室（M0） | [連結](https://mensuration-net.kingaihome.org/) |
+| 數學（必修）— 幾何、空間與度量 | 圓的幾何性質（M0） | [連結](https://kingtmc314.github.io/circle-geometry/?v=20261125) |
 | 數學（必修）— 統計 | 排列、組合及概率 | [連結](https://kingtmc314.github.io/dse-pc-prob-calculator/) |
+| 數學（必修）— 統計 | 生活化概率與期望值模擬器（M0） | [連結](https://furtherprob.kingaihome.org/) |
 | 數學（必修）— 代數 | 圖像變換（M0） | [連結](https://dsegraphtransformation.kingaihome.org) |
 | 數學（必修）— 統計 | StatSpace 統計實驗室 | [連結](https://stats-view-dse.kingaihome.org/) |
 | 數學（必修）— 代數 | 二次函數實驗室 | [連結](https://quadraticfunctions.kingaihome.org/) |
+| 數學（必修）— 代數 | MathFlow｜數學動畫實驗室（M0） | [連結](https://mathflow.kingaihome.org/) |
 | 數學（必修）— 代數 | 多項式動態實驗室（M0） | [連結](https://polynomial-dse.kingaihome.org/) |
 | 數學 (M2) — 代數 | 線性代數實驗室 | [連結](https://dsem2linearalgebra.kingaihome.org) |
 | 數學 (M2) — 代數 | 級數與歸納法計算器 | [連結](https://miseriescalc.kingaihome.org) |
@@ -155,7 +156,19 @@ $$d(P,A)=d(P,B)$$
 
 ---
 
-## 5. 立體切面實驗室（M0） / Mensuration Net Lab (M0)
+<a id="circle-geometry-m0"></a>
+## 5. 圓的幾何性質（M0） / Circle Geometry Lab (M0)
+**連結 / Link：** https://kingtmc314.github.io/circle-geometry/?v=20261125
+以互動圖形探索圓心角、圓周角、弦、切線及圓的幾何關係，鞏固 HKDSE M0 幾何概念。
+Explore central and inscribed angles, chords, tangents and circle relationships interactively for HKDSE M0 geometry.
+
+### 建議使用方法 / Suggested Workflow
+1. 拖動圖形中的點，觀察圓心角與圓周角的變化。 / Drag points and observe how central and inscribed angles change.
+2. 比較弦、切線及相關角度，驗證圓的幾何性質。 / Compare chords, tangents and related angles to verify circle theorems.
+3. 記錄圖形變化及角度關係，並以定理解釋觀察結果。 / Record changes and explain them using theorems.
+$$\angle AOB=2\angle ACB$$
+
+## 6. 立體切面實驗室（M0） / Mensuration Net Lab (M0)
 
 **連結 / Link：** https://mensuration-net.kingaihome.org/
 
@@ -173,7 +186,7 @@ $$V=\frac{1}{3}\pi r^2h\qquad A=2\pi r^2+2\pi rh$$
 
 ---
 
-## 6. 排列、組合及概率 / Permutation, Combination & Probability
+## 7. 排列、組合及概率 / Permutation, Combination & Probability
 
 **連結：** https://kingtmc314.github.io/dse-pc-prob-calculator/
 
@@ -212,7 +225,19 @@ $$V=\frac{1}{3}\pi r^2h\qquad A=2\pi r^2+2\pi rh$$
 
 ---
 
-## 7. 線性代數實驗室 / Linear Algebra Lab
+<a id="probability-ev-simulator-m0"></a>
+## 8. 生活化概率與期望值模擬器（M0） / Probability & EV Simulator (M0)
+**連結 / Link：** https://furtherprob.kingaihome.org/
+以生活化情境模擬概率及期望值，將 M0 概率概念連結至日常決策與實際問題。
+Simulate probability and expected value in everyday contexts, connecting M0 probability concepts with real-life decisions and problems.
+
+### 建議使用方法 / Suggested Workflow
+1. 選擇生活化情境，設定各結果及其概率。 / Choose an everyday scenario and set outcomes and probabilities.
+2. 執行多次模擬，比較實驗結果與理論概率。 / Run repeated simulations and compare experimental and theoretical probabilities.
+3. 使用期望值評估長期平均結果，並注意期望值不一定是實際可出現的結果。 / Use expected value to assess the long-run average; it need not be an actual outcome.
+$$E(X)=\sum_x xP(X=x)$$
+
+## 9. 線性代數實驗室 / Linear Algebra Lab
 
 **連結：** https://dsem2linearalgebra.kingaihome.org
 
@@ -268,7 +293,7 @@ $$V=\frac{1}{3}\pi r^2h\qquad A=2\pi r^2+2\pi rh$$
 
 ---
 
-## 8. 級數與歸納法計算器 / Series and Induction Calculator
+## 10. 級數與歸納法計算器 / Series and Induction Calculator
 
 **連結：** https://miseriescalc.kingaihome.org
 
@@ -318,7 +343,7 @@ $$\sum_{r=1}^{n} 1 = n, \quad \sum_{r=1}^{n} r = \frac{n(n+1)}{2}, \quad \sum_{r
 ---
 
 
-## 9. DSE M2 微積分遊戲 / DSE M2 Calculus Game
+## 11. DSE M2 微積分遊戲 / DSE M2 Calculus Game
 
 **連結 / Link：** https://calcquest.kingaihome.org
 
@@ -326,7 +351,7 @@ $$\sum_{r=1}^{n} 1 = n, \quad \sum_{r=1}^{n} r = \frac{n(n+1)}{2}, \quad \sum_{r
 
 Use progressive challenges to review differentiation, integration and curve analysis with instant feedback. After a challenge, revisit the relevant M2 tool for full derivations and visualisations.
 
-## 10. 微分與曲線描繪 / Differentiation and Curve Sketching
+## 12. 微分與曲線描繪 / Differentiation and Curve Sketching
 
 **連結：** https://kingtmc314.github.io/curve-analyzer/
 
@@ -388,7 +413,7 @@ Use progressive challenges to review differentiation, integration and curve anal
 
 ---
 
-## 11. 積分：面積與體積 / Integration: Area and Volume
+## 13. 積分：面積與體積 / Integration: Area and Volume
 
 **連結：** https://kingtmc314.github.io/integcalc-lab/
 
@@ -437,7 +462,7 @@ Use progressive challenges to review differentiation, integration and curve anal
 
 ---
 
-## 12. 不定積分與定積分 / Indefinite & Definite Integration
+## 14. 不定積分與定積分 / Indefinite & Definite Integration
 
 **連結：** https://kingtmc314.github.io/integral-calculator-students/
 
@@ -534,7 +559,7 @@ Use an interactive parabola to investigate $y=ax^2+bx+c$ and connect its coeffic
 - 頂點及對稱軸 / Vertex and axis of symmetry：從圖像和代數式找出兩者 / Find both from the graph and expression.
 - 根及截距 / Roots and intercepts：比較截距和判別式所反映的圖像特徵 / Compare intercepts and graph features reflected by the discriminant.
 
-## 16. 多項式動態實驗室（M0） / Polynomial DSE Lab (M0)
+## 15. 多項式動態實驗室（M0） / Polynomial DSE Lab (M0)
 
 **連結 / Link：** https://polynomial-dse.kingaihome.org/
 
@@ -549,6 +574,17 @@ Explore polynomial expansion, factorisation, roots, graphs and coefficient chang
 3. 利用代數結果驗證圖像觀察，並記錄不同多項式之間的關係。 / Use the algebraic results to verify observations and record relationships between different polynomials.
 
 $$P(x)=a_nx^n+\cdots+a_1x+a_0$$
+
+<a id="mathflow-maths-animation-lab-m0"></a>
+## 16. MathFlow｜數學動畫實驗室（M0） / MathFlow Maths Animation Lab (M0)
+**連結 / Link：** https://mathflow.kingaihome.org/
+以動畫及互動視覺化展示幾何與代數概念，幫助理解圖形、方程式及數學關係。
+Use animations and interactive visualisations to explore geometry and algebra, including shapes, equations and mathematical relationships.
+
+### 建議使用方法 / Suggested Workflow
+1. 選擇幾何或代數主題，先觀察動畫中的變量及不變量。 / Choose a topic and identify the changing and invariant quantities.
+2. 調整參數，觀察圖形、方程式及數學關係如何互相影響。 / Adjust parameters and observe how shapes, equations and relationships affect one another.
+3. 用符號或圖形記錄規律，並以代數或幾何語言解釋結果。 / Record patterns and explain them using algebraic or geometric language.
 
 ## 17. 常見問題 FAQ
 
